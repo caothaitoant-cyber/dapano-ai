@@ -1,0 +1,741 @@
+<title>Cỗ Máy 14 Ngày</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Dancing+Script:wght@600;700&display=swap">
+<style>
+  :root{
+    --ground:#FAF7FC;
+    --surface:#FFFFFF;
+    --surface-2:#F5F1F8;
+    --ink:#1A0F4A;
+    --ink-soft:#4A3D6E;
+    --ink-mute:#6B5E85;
+    --line:#E4DEEE;
+    --line-strong:#CFC5E2;
+    --indigo:#21135F;
+    --purple:#432A73;
+    --magenta:#5E067C;
+    --accent:#5E067C;
+    --gold:#D4A856;
+    --gold-ink:#7A5A12;
+    --gold-soft:#FBF3E2;
+    --rule:#21135F;
+    --shadow:0 1px 2px rgba(33,19,95,.06), 0 8px 24px -18px rgba(33,19,95,.35);
+    --maxw:74rem;
+    --read:66ch;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#120A2C;
+      --surface:#1A1040;
+      --surface-2:#221551;
+      --ink:#F0EBFA;
+      --ink-soft:#C7BCE2;
+      --ink-mute:#9C8FC0;
+      --line:#2E2062;
+      --line-strong:#3C2B78;
+      --accent:#CB8FE4;
+      --gold-ink:#E8C685;
+      --gold-soft:#2A1C53;
+      --rule:#4B3792;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px -20px rgba(0,0,0,.9);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#120A2C;
+    --surface:#1A1040;
+    --surface-2:#221551;
+    --ink:#F0EBFA;
+    --ink-soft:#C7BCE2;
+    --ink-mute:#9C8FC0;
+    --line:#2E2062;
+    --line-strong:#3C2B78;
+    --accent:#CB8FE4;
+    --gold-ink:#E8C685;
+    --gold-soft:#2A1C53;
+    --rule:#4B3792;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px -20px rgba(0,0,0,.9);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground);
+    color:var(--ink);
+    font-family:Montserrat,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.1rem,4vw,3rem)}
+  p,li{color:var(--ink-soft)}
+  strong{color:var(--ink);font-weight:700}
+  a{color:var(--accent)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+
+  /* ---------- Cover ---------- */
+  .cover{
+    background:linear-gradient(135deg,#21135F 0%,#322168 50%,#5E067C 100%);
+    color:#fff;position:relative;overflow:hidden;
+  }
+  .cover::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.045) 0,rgba(255,255,255,.045) 1px,transparent 1px,transparent 8px);
+  }
+  .cover .wrap{position:relative;z-index:1;padding-top:2rem;padding-bottom:3.4rem}
+  .brandbar{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;
+    padding-bottom:1.6rem;border-bottom:1px solid rgba(255,255,255,.16)}
+  .brandmark{font-weight:800;letter-spacing:.34em;font-size:.82rem;color:#fff}
+  .brandmark span{display:block;font-family:"Dancing Script",cursive;font-size:1.2rem;letter-spacing:normal;
+    color:#F0E0BA;font-weight:600;margin-top:.1rem}
+  .edition{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(240,224,186,.85);text-align:right}
+  .cover h1{
+    font-family:"Playfair Display",Georgia,serif;font-weight:900;
+    font-size:clamp(2.5rem,7vw,4.6rem);line-height:1.02;margin:2.2rem 0 0;
+    text-wrap:balance;color:#fff;
+  }
+  .cover h1 em{font-style:italic;color:#F0E0BA}
+  .kicker{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:#D9A9EE;margin:0}
+  .cover .lede{max-width:44ch;font-size:1.06rem;color:rgba(255,255,255,.86);margin:1.3rem 0 0}
+  .facts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem;padding:0;list-style:none}
+  .facts li{
+    border:1px solid rgba(212,168,86,.5);border-radius:999px;padding:.42rem 1rem;
+    font-size:.78rem;font-weight:600;color:#F0E0BA;letter-spacing:.02em;
+  }
+
+  /* ---------- Sections ---------- */
+  main{padding:clamp(2.4rem,6vw,4.5rem) 0 1rem}
+  section{margin-bottom:clamp(3rem,7vw,5.2rem);scroll-margin-top:1rem}
+  .shead{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:baseline;
+    border-bottom:2px solid var(--rule);padding-bottom:.7rem;margin-bottom:1.7rem}
+  .snum{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:1.05rem;color:var(--gold-ink);
+    font-variant-numeric:tabular-nums}
+  .shead h2{font-family:"Playfair Display",Georgia,serif;font-weight:700;
+    font-size:clamp(1.5rem,3.4vw,2.1rem);line-height:1.15;margin:0;text-wrap:balance;color:var(--ink)}
+  .shead p{grid-column:2;margin:.35rem 0 0;font-size:.95rem;color:var(--ink-mute);max-width:var(--read)}
+  h3{font-family:"Playfair Display",Georgia,serif;font-size:1.2rem;font-weight:700;margin:2.2rem 0 .6rem;color:var(--ink)}
+  .prose{max-width:var(--read)}
+  .prose p{margin:.85rem 0}
+  ul.tick{list-style:none;padding:0;margin:.9rem 0;max-width:var(--read);display:flex;flex-direction:column;gap:.5rem}
+  ul.tick li{padding-left:1.5rem;position:relative}
+  ul.tick li::before{content:"";position:absolute;left:0;top:.62em;width:.5rem;height:.5rem;
+    background:var(--gold);transform:rotate(45deg)}
+
+  /* ---------- Principle cards ---------- */
+  .cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:4px;
+    padding:1.3rem 1.35rem;box-shadow:var(--shadow)}
+  .card h4{margin:.55rem 0 .45rem;font-size:1rem;font-weight:700;color:var(--ink)}
+  .card p{margin:0;font-size:.92rem}
+  .card .tag{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700}
+
+  /* ---------- Tables ---------- */
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--surface);box-shadow:var(--shadow)}
+  table{border-collapse:collapse;width:100%;min-width:44rem;font-size:.9rem}
+  thead th{background:var(--surface-2);color:var(--ink);text-align:left;font-weight:700;
+    font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;padding:.8rem 1rem;
+    border-bottom:1px solid var(--line-strong);white-space:nowrap}
+  td{padding:.85rem 1rem;border-bottom:1px solid var(--line);color:var(--ink-soft);vertical-align:top}
+  tbody tr:last-child td{border-bottom:none}
+  td strong{display:block;color:var(--ink)}
+  .num{font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink);font-weight:600}
+  .tier{font-family:"Playfair Display",Georgia,serif;font-weight:700;color:var(--gold-ink);font-size:1rem}
+  caption{caption-side:bottom;text-align:left;padding:.8rem 1rem;font-size:.8rem;color:var(--ink-mute)}
+
+  /* ---------- 14-day rail ---------- */
+  .loop{list-style:none;margin:0;padding:0}
+  .phase{margin:2rem 0 .9rem;display:flex;align-items:center;gap:.9rem}
+  .phase:first-child{margin-top:.5rem}
+  .phase span{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;font-weight:800;color:var(--accent);white-space:nowrap}
+  .phase::after{content:"";flex:1;height:1px;background:var(--line-strong)}
+  .day{display:grid;grid-template-columns:6.2rem 1fr;gap:1.4rem;padding:1rem 0;border-top:1px solid var(--line)}
+  .day:first-of-type{border-top:none}
+  .dnum{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:1.02rem;color:var(--ink);
+    font-variant-numeric:tabular-nums;padding-top:.05rem}
+  .dnum small{display:block;font-family:Montserrat,sans-serif;font-size:.68rem;font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);margin-top:.15rem}
+  .dbody h4{margin:0 0 .35rem;font-size:1rem;font-weight:700;color:var(--ink)}
+  .dbody p{margin:0;font-size:.93rem;max-width:var(--read)}
+  .out{margin-top:.5rem !important;font-size:.82rem !important;color:var(--ink-mute)}
+  .out b{color:var(--gold-ink);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.72rem}
+  @media (max-width:34rem){
+    .day{grid-template-columns:1fr;gap:.35rem}
+    .dnum{display:flex;align-items:baseline;gap:.6rem}
+    .dnum small{margin-top:0}
+  }
+
+  /* ---------- Script blocks ---------- */
+  .script{border-left:3px solid var(--gold);background:var(--gold-soft);padding:.85rem 1.1rem;
+    margin:.7rem 0 0;max-width:var(--read);border-radius:0 4px 4px 0}
+  .script p{margin:0;font-family:"Playfair Display",Georgia,serif;font-style:italic;
+    font-size:1rem;color:var(--ink);line-height:1.55}
+  .script .who{display:block;font-family:Montserrat,sans-serif;font-style:normal;font-size:.65rem;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--gold-ink);font-weight:700;margin-bottom:.35rem}
+
+  .block{display:grid;grid-template-columns:5.6rem 1fr;gap:1.2rem;padding:1.15rem 0;border-top:1px solid var(--line)}
+  .block:first-of-type{border-top:none}
+  .time{font-variant-numeric:tabular-nums;font-weight:700;font-size:.85rem;color:var(--accent);white-space:nowrap;padding-top:.15rem}
+  .block h4{margin:0 0 .3rem;font-size:1rem;color:var(--ink)}
+  .block p{margin:0;font-size:.93rem;max-width:var(--read)}
+  @media (max-width:34rem){.block{grid-template-columns:1fr;gap:.3rem}}
+
+  /* ---------- Insight hero ---------- */
+  .insight{
+    background:linear-gradient(135deg,#21135F 0%,#432A73 50%,#5E067C 100%);
+    color:#fff;border-radius:5px;padding:clamp(1.6rem,4vw,2.6rem);position:relative;overflow:hidden;
+    margin:2.2rem 0;
+  }
+  .insight::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.04) 0,rgba(255,255,255,.04) 1px,transparent 1px,transparent 8px)}
+  .insight > *{position:relative;z-index:1}
+  .insight h3{color:#fff;font-family:Montserrat,sans-serif;font-size:.7rem;letter-spacing:.28em;
+    text-transform:uppercase;margin:0 0 .9rem;font-weight:700}
+  .insight p{color:rgba(255,255,255,.9);margin:0;max-width:56ch}
+  .insight .quote{font-family:"Dancing Script",cursive;font-size:clamp(1.4rem,3.6vw,2rem);
+    color:#F0E0BA;line-height:1.3;margin:0 0 .7rem}
+
+  /* ---------- Two-column utility ---------- */
+  .duo{display:grid;gap:1.6rem;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));align-items:start}
+  .panel{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:1.4rem;box-shadow:var(--shadow)}
+  .panel h4{margin:0 0 .8rem;font-family:"Playfair Display",Georgia,serif;font-size:1.08rem;color:var(--ink)}
+  .panel ol{margin:0;padding-left:1.15rem}
+  .panel ol li{margin:.4rem 0;font-size:.92rem}
+  .ban{border-left:3px solid #B0304F}
+  .ban li{color:var(--ink-soft)}
+  .ban li b{color:var(--ink)}
+
+  /* ---------- Footer ---------- */
+  footer{background:linear-gradient(135deg,#21135F 0%,#322168 50%,#5E067C 100%);color:#fff;
+    margin-top:3rem;position:relative;overflow:hidden}
+  footer::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.04) 0,rgba(255,255,255,.04) 1px,transparent 1px,transparent 8px)}
+  footer .wrap{position:relative;z-index:1;padding-top:2.6rem;padding-bottom:2.6rem;text-align:center}
+  footer .sig{font-family:"Dancing Script",cursive;font-size:1.9rem;color:#F0E0BA;margin:0}
+  footer .fine{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.62);margin:.9rem 0 0}
+  footer .think{font-family:"Dancing Script",cursive;font-size:1.15rem;color:#fff;margin:.4rem 0 0}
+</style>
+
+<header class="cover">
+  <div class="wrap">
+    <div class="brandbar">
+      <div class="brandmark">DAPANO GROUP<span>Think Kind!</span></div>
+      <div class="edition">Kịch bản vận hành nội bộ<br>Bản dùng lặp — không ghi năm</div>
+    </div>
+    <p class="kicker" style="margin-top:2.4rem">Một vòng lặp · 14 ngày · 26 lần một năm</p>
+    <h1>Cỗ Máy<br><em>14 Ngày</em></h1>
+    <p class="lede">Kịch bản kiếm tiền từ bất động sản bằng cách dạy người khác đầu tư — lặp đi lặp lại đến mức nhàm chán, và chính sự nhàm chán đó là thứ tạo ra dòng thu đều.</p>
+    <ul class="facts">
+      <li>1 buổi dạy cố định</li>
+      <li>5 dòng thu</li>
+      <li>90 phút mỗi ngày</li>
+      <li>1 cải tiến mỗi vòng</li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="nguyen-ly">
+    <div class="shead">
+      <div class="snum">01</div>
+      <h2>Ba nguyên lý làm nền</h2>
+      <p>Đọc phần này một lần. Từ vòng thứ hai trở đi anh chỉ cần mở phần 03 và làm theo.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="tag">Nguyên lý 1</div>
+        <h4>Dạy là kênh bán duy nhất cần thiết</h4>
+        <p>Người trung lưu 35–55 tuổi không mua vì quảng cáo. Họ mua vì hiểu. Một buổi dạy 90 phút làm xong cả bốn việc: thu hút, xây niềm tin, sàng lọc và bán — nên anh không cần thêm phễu nào khác.</p>
+      </div>
+      <div class="card">
+        <div class="tag">Nguyên lý 2</div>
+        <h4>Một kịch bản, không phải mười</h4>
+        <p>Buổi dạy giống nhau 26 lần một năm. Slide không đổi, câu chuyện không đổi, câu chốt không đổi. Người nghe mỗi vòng là người mới — chỉ có anh là thấy chán. Chán chính là dấu hiệu máy đã chạy đúng.</p>
+      </div>
+      <div class="card">
+        <div class="tag">Nguyên lý 3</div>
+        <h4>Tiền đến từ 5 dòng, không phải 1</h4>
+        <p>Một vòng lặp nuôi năm dòng thu cùng lúc: vé thấp, khóa lõi, đồng hành, phí vận hành và giới thiệu giao dịch. Vòng nào yếu một dòng thì bốn dòng còn lại vẫn chảy.</p>
+      </div>
+    </div>
+
+    <div class="insight">
+      <h3>Điều cần chấp nhận trước</h3>
+      <p class="quote">Thu nhập lặp lại là phần thưởng cho người chịu làm một việc nhàm chán lâu hơn người khác.</p>
+      <p>Vòng 1 và vòng 2 sẽ lỗ thời gian. Vòng 3 hòa. Từ vòng 4 trở đi máy bắt đầu trả tiền, vì lúc đó tài sản đã làm xong, học viên cũ bắt đầu giới thiệu, và anh không còn phải nghĩ nữa — chỉ chạy.</p>
+    </div>
+  </section>
+
+  <section id="dong-thu">
+    <div class="shead">
+      <div class="snum">02</div>
+      <h2>Năm dòng thu trên một thang</h2>
+      <p>Cùng một tập khách, đi lên từng bậc. Không ai nhảy thẳng từ bậc 0 lên bậc 3 — và anh cũng đừng cố bán như vậy.</p>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <caption>Con số dưới đây là khung tham khảo để anh điền số thật của mình vào — không phải cam kết lợi nhuận.</caption>
+        <thead>
+          <tr><th>Bậc</th><th>Sản phẩm</th><th>Khoảng giá</th><th>Vai trò trong máy</th><th>Nhịp lặp</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tier">T0</td>
+            <td><strong>Buổi dạy 90 phút + Cẩm nang định giá dòng tiền</strong>Miễn phí, online</td>
+            <td class="num">0 đ</td>
+            <td>Thu người lạ, tạo niềm tin, lấy lịch hẹn 1-1</td>
+            <td>Mỗi 14 ngày</td>
+          </tr>
+          <tr>
+            <td class="tier">T1</td>
+            <td><strong>Workshop “Đọc vị một căn trong 30 phút”</strong>2 buổi, có bài tập chấm</td>
+            <td class="num">490 k – 1,9 tr</td>
+            <td>Lọc ra người chịu trả tiền — đây là danh sách bán khóa lõi</td>
+            <td>Mỗi 14 ngày</td>
+          </tr>
+          <tr>
+            <td class="tier">T2</td>
+            <td><strong>Khóa lõi: Mua – Xây – Cho thuê – Bán</strong>Cohort 8 tuần, học theo nhóm</td>
+            <td class="num">15 – 30 tr</td>
+            <td>Doanh thu chính của mỗi vòng</td>
+            <td>Khai giảng mỗi tháng</td>
+          </tr>
+          <tr>
+            <td class="tier">T3</td>
+            <td><strong>Đồng hành thẩm định từng căn</strong>Báo cáo định giá dòng tiền theo IVS 105</td>
+            <td class="num">3 – 5 tr / căn<br>hoặc 50 – 80 tr / 6 tháng</td>
+            <td>Biên cao, ít suất, chỉ bán cho học viên đã học T2</td>
+            <td>Nhận theo suất</td>
+          </tr>
+          <tr>
+            <td class="tier">T4</td>
+            <td><strong>Dòng định kỳ</strong>Thành viên cộng đồng · phí vận hành cho thuê · phí giới thiệu giao dịch</td>
+            <td class="num">299 k – 990 k / tháng<br>8 – 10 % tiền thuê</td>
+            <td>Đây mới là “thu nhập lặp lại”. Ba bậc trên tồn tại để nuôi bậc này.</td>
+            <td>Hằng tháng, tự động</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose">
+      <h3>Quy tắc bán duy nhất</h3>
+      <p>Trong buổi dạy T0 anh <strong>chỉ được bán T1</strong>. Trong T1 chỉ bán T2. Trong T2 chỉ bán T3 và T4. Nhảy bậc là cách nhanh nhất để mất người — và trái với Bước 3-4-5 trong hệ thống 8+2: chưa hiểu nhu cầu thì chưa báo giá.</p>
+    </div>
+  </section>
+
+  <section id="vong-lap">
+    <div class="shead">
+      <div class="snum">03</div>
+      <h2>Vòng lặp 14 ngày</h2>
+      <p>Đây là trái tim của cả hệ thống. In phần này ra, dán lên tường, và làm y hệt mỗi hai tuần.</p>
+    </div>
+
+    <ol class="loop">
+      <li class="phase"><span>Ngày 1–7 · Gieo</span></li>
+
+      <li class="day">
+        <div class="dnum">Ngày 1<small>~60 phút</small></div>
+        <div class="dbody">
+          <h4>Mở đăng ký buổi dạy ngày 8</h4>
+          <p>Dựng trang đăng ký (lần đầu làm, các vòng sau chỉ đổi ngày). Đăng bài công thức <strong>Question/Engage</strong> để dò nhu cầu: hỏi đúng một câu về nỗi đau tiền thuê không đủ trả lãi.</p>
+          <p class="out"><b>Đầu ra</b> Link đăng ký sống + 1 bài đã đăng</p>
+        </div>
+      </li>
+
+      <li class="day">
+        <div class="dnum">Ngày 2<small>~45 phút</small></div>
+        <div class="dbody">
+          <h4>Bài Myth Busting</h4>
+          <p>Đập một niềm tin sai phổ biến: “mua đất chờ tăng giá là đầu tư”. Đây là bài kéo reach của cả vòng.</p>
+          <p class="out"><b>Đầu ra</b> 1 bài + mời đăng ký ở cuối bài</p>
+        </div>
+      </li>
+
+      <li class="day">
+        <div class="dnum">Ngày 3<small>~45 phút</small></div>
+        <div class="dbody">
+          <h4>Bài Story</h4>
+          <p>Kể một căn thật — của anh hoặc của học viên — kèm con số NOI và Cap Rate thật. Không kết luận hộ người đọc.</p>
+          <p class="out"><b>Đầu ra</b> 1 bài + 10 tin nhắn cá nhân mời người quan tâm</p>
+        </div>
+      </li>
+
+      <li class="day">
+        <div class="dnum">Ngày 4<small>~45 phút</small></div>
+        <div class="dbody">
+          <h4>Bài List/Tips</h4>
+          <p>“5 con số phải tính trước khi xuống cọc”. Bài này để người ta lưu và chia sẻ — nguồn người đăng ký rẻ nhất.</p>
+          <p class="out"><b>Đầu ra</b> 1 bài + đếm số lưu</p>
+        </div>
+      </li>
+
+      <li class="day">
+        <div class="dnum">Ngày 5<small>~45 phút</small></div>
+        <div class="dbody">
+          <h4>Bài Before–After–Bridge</h4>
+          <p>Một học viên trước và sau. Nếu vòng này chưa có case mới, dùng lại case cũ — người mới chưa từng đọc.</p>
+          <p class="out"><b>Đầu ra</b> 1 bài + 1 ảnh chụp báo cáo dòng tiền</p>
+        </div>
+      </li>
+
+      <li class="day">
+        <div class="dnum">Ngày 6<small>~30 phút</small></div>
+        <div class="dbody">
+          <h4>Nhắc lần 1 + gọi lại danh sách cũ</h4>
+          <p>Email và tin nhắn cho toàn bộ người đã đăng ký. Gọi 10 người từ các vòng trước chưa mua — hỏi thăm, không bán.</p>
+          <p class="out"><b>Đầu ra</b> 1 email đã gửi + 10 cuộc gọi</p>
+        </div>
+      </li>
+
+      <li class="day">
+        <div class="dnum">Ngày 7<small>~40 phút</small></div>
+        <div class="dbody">
+          <h4>Bài Enemy/Reframe + duyệt kỹ thuật</h4>
+          <p>Định vị: “Em không dạy lướt sóng.” Sau đó kiểm tra Zoom, slide, âm thanh, bảng tính live. Kiểm tra bằng checklist, không bằng trí nhớ.</p>
+          <p class="out"><b>Đầu ra</b> 1 bài + phòng học sẵn sàng</p>
+        </div>
+      </li>
+
+      <li class="phase"><span>Ngày 8 · Dạy</span></li>
+
+      <li class="day">
+        <div class="dnum">Ngày 8<small>120 phút</small></div>
+        <div class="dbody">
+          <h4>Buổi dạy 90 phút — kịch bản cố định ở phần 04</h4>
+          <p>Vào sớm 15 phút, ở lại 15 phút sau giờ. Không thêm nội dung mới, không ứng biến. Chốt duy nhất một hành động: đặt lịch nói chuyện riêng 45 phút.</p>
+          <p class="out"><b>Đầu ra</b> Bản ghi buổi học + danh sách người đặt lịch 1-1</p>
+        </div>
+      </li>
+
+      <li class="phase"><span>Ngày 9–12 · Gặp &amp; chốt</span></li>
+
+      <li class="day">
+        <div class="dnum">Ngày 9<small>~90 phút</small></div>
+        <div class="dbody">
+          <h4>Gửi bản ghi + mở bán T1</h4>
+          <p>Gửi bản ghi cho tất cả người đăng ký, kể cả người không dự. Kèm lời mời workshop T1 với hạn thật là ngày 12.</p>
+          <p class="out"><b>Đầu ra</b> Email bản ghi + đơn hàng T1 đầu tiên</p>
+        </div>
+      </li>
+
+      <li class="day">
+        <div class="dnum">Ngày 10–11<small>4–6 cuộc / ngày</small></div>
+        <div class="dbody">
+          <h4>Tư vấn 1-1 theo hệ thống 8+2</h4>
+          <p>Mỗi cuộc 45 phút, theo kịch bản phần 05. Đi đủ Bước 3-4-5 rồi mới nói giá. Cuộc nào không phù hợp thì buông sớm và xin lời giới thiệu.</p>
+          <p class="out"><b>Đầu ra</b> 8–12 cuộc + ghi chú nhu cầu vào bảng theo dõi</p>
+        </div>
+      </li>
+
+      <li class="day">
+        <div class="dnum">Ngày 12<small>~60 phút</small></div>
+        <div class="dbody">
+          <h4>Đóng ưu đãi — hạn thật, không giả</h4>
+          <p>Nhắn cho từng người đã tư vấn, không nhắn hàng loạt. Ai chưa quyết thì đề xuất bậc thấp hơn để giữ họ lại trong hệ thống (Bước 7).</p>
+          <p class="out"><b>Đầu ra</b> Danh sách chốt của vòng này</p>
+        </div>
+      </li>
+
+      <li class="phase"><span>Ngày 13–14 · Giao &amp; đo</span></li>
+
+      <li class="day">
+        <div class="dnum">Ngày 13<small>~90 phút</small></div>
+        <div class="dbody">
+          <h4>Đón người mới + thu case study</h4>
+          <p>Gửi tài liệu, thêm vào nhóm, hẹn buổi học đầu. Đồng thời xin một case study từ học viên cũ vừa có kết quả — đây là nguyên liệu cho bài ngày 5 của vòng sau.</p>
+          <p class="out"><b>Đầu ra</b> Người mới đã vào lớp + 1 case study mới</p>
+        </div>
+      </li>
+
+      <li class="day">
+        <div class="dnum">Ngày 14<small>~45 phút</small></div>
+        <div class="dbody">
+          <h4>Ghi số và sửa đúng một thứ</h4>
+          <p>Điền 7 chỉ số ở phần 08 vào bảng. Nhìn chỗ rơi nhiều người nhất và <strong>chỉ sửa một điểm duy nhất</strong> cho vòng sau. Sửa nhiều thứ cùng lúc thì không bao giờ biết thứ nào có tác dụng.</p>
+          <p class="out"><b>Đầu ra</b> Bảng số đã điền + 1 thay đổi đã ghi rõ</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="insight">
+      <h3>Quy tắc một cải tiến</h3>
+      <p class="quote">Mỗi vòng chỉ được sửa một thứ.</p>
+      <p>Hai mươi sáu vòng một năm là hai mươi sáu cải tiến có bằng chứng. Đó là lý do cỗ máy nhàm chán luôn thắng cỗ máy sáng tạo: nó học được, còn cỗ máy sáng tạo thì không đo được gì.</p>
+    </div>
+  </section>
+
+  <section id="kich-ban-day">
+    <div class="shead">
+      <div class="snum">04</div>
+      <h2>Kịch bản buổi dạy 90 phút</h2>
+      <p>Bảy khối, cố định. Câu in nghiêng là câu anh đọc gần như nguyên văn mỗi lần — đừng nghĩ lại mỗi vòng.</p>
+    </div>
+
+    <div class="block">
+      <div class="time">0–5′</div>
+      <div>
+        <h4>Khung buổi học</h4>
+        <p>Nói rõ ba điều: hôm nay học gì, không học gì, và cuối buổi sẽ có một lời mời.</p>
+        <div class="script"><span class="who">Câu mở</span><p>“Chín mươi phút tới em chỉ dạy anh chị một việc: cách nhìn một căn nhà và biết nó có nuôi nổi chính nó hay không. Em không dạy lướt sóng, không dạy đất nền. Cuối buổi em có một lời mời — anh chị nghe xong rồi tùy.”</p></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="time">5–15′</div>
+      <div>
+        <h4>Câu chuyện gốc</h4>
+        <p>Một câu chuyện thật của anh, kể lại y hệt mỗi vòng. Phải có một khoảnh khắc anh sai và mất tiền — đó là chỗ người nghe mở lòng.</p>
+        <div class="script"><span class="who">Chuyển ý</span><p>“Lúc đó em mới hiểu: em không mua tài sản, em mua một khoản nợ có mái che.”</p></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="time">15–35′</div>
+      <div>
+        <h4>Bài học 1 — Cash Flow First</h4>
+        <p>Dạy đúng hai công thức: NOI và Cap Rate. Bắt cả phòng tính thử một căn ngay tại chỗ. Người nào gõ được con số ra là người sẽ mua sau này.</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="time">35–55′</div>
+      <div>
+        <h4>Bài học 2 — Ba cách định giá, một con số để quyết</h4>
+        <p>So sánh giá thị trường, giá chi phí và giá dòng tiền trên cùng một căn. Cho thấy ba con số lệch nhau bao nhiêu, và vì sao chỉ con số thứ ba mới trả lời được câu “có nên mua không”.</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="time">55–70′</div>
+      <div>
+        <h4>Mổ một căn thật, live</h4>
+        <p>Mở bảng tính, nhận một căn do người trong phòng gửi lên, tính trực tiếp. Đây là khối tạo niềm tin mạnh nhất — và cũng là khối anh không được rút gọn khi cháy giờ.</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="time">70–80′</div>
+      <div>
+        <h4>Chuyển tiếp — ba nhóm người trong phòng</h4>
+        <p>Phân loại công khai để người nghe tự nhận mình vào nhóm, thay vì anh đẩy họ vào.</p>
+        <div class="script"><span class="who">Câu chuyển</span><p>“Trong phòng này thường có ba nhóm. Nhóm một đã đủ để tự làm — anh chị cứ lấy công thức hôm nay và làm, em mừng. Nhóm hai biết công thức nhưng chưa dám xuống tiền một mình. Nhóm ba đang cầm sẵn một căn và cần người tính cùng. Em nói tiếp cho nhóm hai và nhóm ba.”</p></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="time">80–90′</div>
+      <div>
+        <h4>Lời mời và đặt lịch</h4>
+        <p>Mời đúng một thứ: workshop T1. Và mở một số suất nói chuyện riêng 45 phút. Không báo giá khóa lõi ở đây.</p>
+        <div class="script"><span class="who">Câu chốt</span><p>“Em để lại một đường link. Anh chị nào muốn em ngồi tính cùng một căn cụ thể thì đặt cho em bốn mươi lăm phút. Em không bán gì trong buổi đó — em tính, rồi nếu hợp thì mình nói chuyện tiếp.”</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kich-ban-1-1">
+    <div class="shead">
+      <div class="snum">05</div>
+      <h2>Kịch bản cuộc 1-1 · 45 phút</h2>
+      <p>Đây là chỗ tiền thật đổi tay. Ánh xạ thẳng vào hệ thống 8+2 — không được đảo thứ tự.</p>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Phút</th><th>Bước 8+2</th><th>Việc phải làm</th><th>Cấm</th></tr></thead>
+        <tbody>
+          <tr><td class="num">0–5</td><td><strong>Bước 3</strong>Thân tình</td><td>Hỏi về gia đình, công việc, vì sao quan tâm BĐS lúc này. Tìm một điểm chung thật.</td><td>Vào thẳng sản phẩm</td></tr>
+          <tr><td class="num">5–20</td><td><strong>Bước 4</strong>Hình tròn</td><td>Hỏi ba lớp: đang có gì, muốn gì trong 5 năm, sợ điều gì nhất. Ghi lại nguyên văn lời họ nói.</td><td>Nói nhiều hơn khách</td></tr>
+          <tr><td class="num">20–32</td><td><strong>Bước 5</strong>Hình vuông</td><td>Tính một căn cụ thể của họ ngay tại chỗ. Chỉ ra khoảng cách giữa chỗ họ đang đứng và chỗ họ muốn tới.</td><td>Liệt kê hết tính năng khóa học</td></tr>
+          <tr><td class="num">32–40</td><td><strong>Bước 6</strong>Chốt</td><td>Bây giờ mới báo giá, một gói duy nhất, đúng gói họ cần. Nói rõ có gì và không có gì.</td><td>Đẩy gói to hơn để ăn hoa hồng</td></tr>
+          <tr><td class="num">40–44</td><td><strong>Bước 7</strong>Xử lý từ chối</td><td>Nếu chưa đủ tiền hoặc chưa sẵn sàng: đề xuất bậc thấp hơn (T1 hoặc T4) để giữ quan hệ.</td><td>Tỏ thái độ khi bị từ chối</td></tr>
+          <tr><td class="num">44–45</td><td><strong>+2</strong>Xin giới thiệu</td><td>Dù họ mua hay không: “Anh chị có ai đang cầm một căn mà chưa biết nên giữ hay bán không ạ?”</td><td>Xin khi mình chưa phục vụ gì</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="tai-san">
+    <div class="shead">
+      <div class="snum">06</div>
+      <h2>Chín tài sản làm một lần, dùng mãi</h2>
+      <p>Toàn bộ công sức sáng tạo nằm ở đây, và chỉ ở đây. Làm xong chín thứ này thì mọi vòng sau chỉ còn là thao tác.</p>
+    </div>
+
+    <div class="duo">
+      <div class="panel">
+        <h4>Bộ thu hút</h4>
+        <ol>
+          <li><strong>Cẩm nang định giá dòng tiền</strong> — PDF, dùng làm quà đổi lấy thông tin liên hệ</li>
+          <li><strong>Bộ 14 bài viết</strong> theo 8 công thức COMPASS — vòng sau đổi con số, giữ nguyên khung</li>
+          <li><strong>Trang đăng ký</strong> — một trang duy nhất, mỗi vòng chỉ đổi ngày</li>
+        </ol>
+      </div>
+      <div class="panel">
+        <h4>Bộ giảng dạy</h4>
+        <ol start="4">
+          <li><strong>Slide 90 phút</strong> theo bảy khối ở phần 04</li>
+          <li><strong>Bảng tính định giá</strong> — NOI, Cap Rate, DCF ba kịch bản, dùng để mổ live</li>
+          <li><strong>Ba case study</strong> có số thật, luân phiên dùng lại</li>
+        </ol>
+      </div>
+      <div class="panel">
+        <h4>Bộ chuyển tiền</h4>
+        <ol start="7">
+          <li><strong>Kịch bản 1-1</strong> in ra, để cạnh máy khi gọi</li>
+          <li><strong>Chuỗi 6 email</strong> — nhắc, bản ghi, mời T1, đóng hạn, đón người mới, xin case</li>
+          <li><strong>Bảng theo dõi 7 chỉ số</strong> — một dòng cho mỗi vòng</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="bang-so">
+    <div class="shead">
+      <div class="snum">07</div>
+      <h2>Cỗ máy này ra tiền thế nào</h2>
+      <p>Một ví dụ tính toán để anh thay số thật vào. Đây là bài toán phễu, không phải lời hứa kết quả.</p>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <caption>Giả định thận trọng cho một vòng 14 ngày khi máy đã chạy ổn định từ vòng 4 trở đi. Tỷ lệ thật của anh sẽ khác — hãy đo, đừng tin bảng này.</caption>
+        <thead><tr><th>Chặng</th><th>Số người</th><th>Tỷ lệ chuyển</th><th>Doanh thu vòng</th></tr></thead>
+        <tbody>
+          <tr><td>Người tiếp cận bài viết</td><td class="num">3.000</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>Đăng ký buổi dạy T0</td><td class="num">150</td><td class="num">5 %</td><td class="num">0 đ</td></tr>
+          <tr><td>Dự buổi dạy</td><td class="num">60</td><td class="num">40 %</td><td class="num">0 đ</td></tr>
+          <tr><td>Mua workshop T1</td><td class="num">9</td><td class="num">15 %</td><td class="num">~ 9 tr</td></tr>
+          <tr><td>Đặt lịch 1-1</td><td class="num">12</td><td class="num">20 %</td><td class="num">—</td></tr>
+          <tr><td>Vào khóa lõi T2</td><td class="num">3</td><td class="num">25 %</td><td class="num">~ 60 tr</td></tr>
+          <tr><td>Nhận đồng hành T3</td><td class="num">1</td><td class="num">—</td><td class="num">~ 5 tr</td></tr>
+          <tr><td><strong>Cộng dồn T4 sau mỗi vòng</strong>Thành viên + phí vận hành</td><td class="num">+8</td><td class="num">—</td><td class="num">~ +4 tr / tháng</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose">
+      <p>Phần đáng chú ý nằm ở dòng cuối. Doanh thu T1–T3 dừng lại khi anh dừng chạy. <strong>T4 thì cộng dồn:</strong> mỗi vòng thêm vài người ở lại, sau 26 vòng con số nhỏ ấy trở thành dòng thu nền không phụ thuộc vào việc anh có dạy hay không. Đó mới là thứ anh đang xây.</p>
+    </div>
+  </section>
+
+  <section id="do-luong">
+    <div class="shead">
+      <div class="snum">08</div>
+      <h2>Bảy chỉ số ghi mỗi vòng</h2>
+      <p>Ghi vào ngày 14, không ghi giữa chừng. Một dòng cho mỗi vòng, không bao giờ xóa dòng cũ.</p>
+    </div>
+
+    <ul class="tick">
+      <li><strong>Số người đăng ký</strong> — đo sức của 7 bài viết</li>
+      <li><strong>Tỷ lệ dự / đăng ký</strong> — đo sức của email nhắc; dưới 30 % là email có vấn đề</li>
+      <li><strong>Tỷ lệ đặt lịch 1-1 / người dự</strong> — đo sức của khối 70–90′; dưới 15 % là câu chốt có vấn đề</li>
+      <li><strong>Tỷ lệ chốt / cuộc 1-1</strong> — đo kỹ năng 8+2; dưới 20 % là đang báo giá quá sớm</li>
+      <li><strong>Doanh thu vòng</strong> — tách riêng T1, T2, T3</li>
+      <li><strong>Số người T4 cộng thêm</strong> — chỉ số quan trọng nhất của cả bảng</li>
+      <li><strong>Số lời giới thiệu nhận được</strong> — đo chất lượng phục vụ ở Bước 8</li>
+    </ul>
+
+    <div class="prose">
+      <h3>Cách đọc bảng</h3>
+      <p>Nhìn cột nào rơi mạnh nhất so với vòng trước, sửa đúng chỗ đó, và chỉ chỗ đó. Nếu ba vòng liên tiếp không có chỉ số nào cải thiện, vấn đề không nằm ở kỹ thuật mà nằm ở đối tượng — lúc đó mới xem lại hồ sơ khách hàng.</p>
+    </div>
+  </section>
+
+  <section id="nhan-ban">
+    <div class="shead">
+      <div class="snum">09</div>
+      <h2>Nhân bản từ vòng thứ sáu</h2>
+      <p>Máy chỉ thật sự là máy khi nó chạy được mà không có anh. Giao việc theo đúng thứ tự này.</p>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Giai đoạn</th><th>Anh giữ</th><th>Giao đi</th><th>Người nhận</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Vòng 1–3</strong>Tự chạy tay</td><td>Toàn bộ</td><td>Không giao gì</td><td>—</td></tr>
+          <tr><td><strong>Vòng 4–5</strong>Bỏ việc tay chân</td><td>Dạy + 1-1 + nội dung</td><td>Đăng bài, gửi email, đặt lịch, thu tiền, đón người mới</td><td>Trợ lý vận hành</td></tr>
+          <tr><td><strong>Vòng 6–10</strong>Bỏ việc lặp</td><td>Dạy + 1-1</td><td>Viết bài theo 8 công thức, chấm bài tập T1, chăm nhóm</td><td>Học viên giỏi làm trợ giảng</td></tr>
+          <tr><td><strong>Vòng 11+</strong>Chỉ giữ hai việc</td><td>Buổi dạy ngày 8 + cuộc 1-1 giá trị cao</td><td>Toàn bộ T1, chấm định giá, vận hành cho thuê</td><td>Trợ giảng đã qua 3 vòng</td></tr>
+          <tr><td><strong>Bước cuối</strong>Nhượng kịch bản</td><td>Đào tạo người dạy + chuẩn chất lượng</td><td>Cả vòng lặp, ở tỉnh khác hoặc phân khúc khác</td><td>Đối tác chia doanh thu</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose">
+      <p>Điều kiện để giao một khối: khối đó đã có <strong>kịch bản viết ra giấy</strong> và anh đã chạy nó ít nhất năm lần. Giao một việc chưa có kịch bản là giao rủi ro, không phải giao việc.</p>
+    </div>
+  </section>
+
+  <section id="ky-luat">
+    <div class="shead">
+      <div class="snum">10</div>
+      <h2>Kỷ luật hằng ngày và ranh giới</h2>
+      <p>Chín mươi phút mỗi ngày, và sáu điều không bao giờ làm.</p>
+    </div>
+
+    <div class="duo">
+      <div class="panel">
+        <h4>90 phút mỗi ngày, đúng thứ tự</h4>
+        <ol>
+          <li><strong>15′</strong> — trả lời hết tin nhắn và bình luận, không sót ai</li>
+          <li><strong>30′</strong> — viết hoặc đăng nội dung của ngày hôm đó</li>
+          <li><strong>30′</strong> — gọi 5 người: 2 người mới, 2 người cũ chưa mua, 1 người đã mua</li>
+          <li><strong>10′</strong> — cập nhật bảng theo dõi</li>
+          <li><strong>5′</strong> — chuẩn bị việc của ngày mai theo phần 03</li>
+        </ol>
+      </div>
+      <div class="panel ban">
+        <h4>Sáu điều tuyệt đối không</h4>
+        <ol>
+          <li>Không hứa <b>làm giàu nhanh</b> hay nhân đôi tài sản trong vài tháng</li>
+          <li>Không cam kết <b>lợi nhuận cố định</b> kiểu trái phiếu</li>
+          <li>Không đụng tới <b>condotel, nghỉ dưỡng, đầu cơ đất nền</b></li>
+          <li>Không nhận người có vốn <b>dưới 500 triệu</b> vào khóa lõi</li>
+          <li>Không dùng <b>khan hiếm giả</b> — hạn chót phải là hạn chót thật</li>
+          <li>Không bán khi biết người đó <b>chưa cần</b> — nói thật là chưa cần</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="insight">
+      <h3>Vì sao ranh giới quan trọng hơn kỹ thuật</h3>
+      <p class="quote">Bán hàng là phục vụ, bán hàng là đào tạo.</p>
+      <p>Cỗ máy này sống bằng lời giới thiệu — mà lời giới thiệu chỉ đến từ những người anh đã đối xử tử tế, kể cả những người không mua. Một vòng lặp bẩn có thể ra tiền một lần. Nó không thể lặp hai mươi sáu lần.</p>
+    </div>
+  </section>
+
+  <section id="90-ngay">
+    <div class="shead">
+      <div class="snum">11</div>
+      <h2>Chín mươi ngày đầu tiên</h2>
+      <p>Sáu vòng đầu, mỗi vòng có đúng một mục tiêu. Đừng đòi hỏi vòng 1 làm việc của vòng 5.</p>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Vòng</th><th>Ngày</th><th>Mục tiêu duy nhất</th><th>Coi là thành công khi</th></tr></thead>
+        <tbody>
+          <tr><td class="tier">1</td><td class="num">1–14</td><td>Dạy xong buổi đầu tiên, dù chỉ 5 người nghe</td><td>Có bản ghi và slide dùng lại được</td></tr>
+          <tr><td class="tier">2</td><td class="num">15–28</td><td>Chạy đủ 14 ngày không bỏ ngày nào</td><td>Bảng theo dõi có dòng đầu tiên</td></tr>
+          <tr><td class="tier">3</td><td class="num">29–42</td><td>Bán được đơn T1 đầu tiên</td><td>Có tiền vào tài khoản, dù nhỏ</td></tr>
+          <tr><td class="tier">4</td><td class="num">43–56</td><td>Chốt học viên T2 đầu tiên</td><td>Cohort đầu khai giảng</td></tr>
+          <tr><td class="tier">5</td><td class="num">57–70</td><td>Có case study thật từ học viên</td><td>Bài BAB ngày 5 dùng người thật</td></tr>
+          <tr><td class="tier">6</td><td class="num">71–84</td><td>Giao khối vận hành cho trợ lý</td><td>Anh không còn tự gửi email</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose">
+      <p>Sau vòng 6, anh không cần tài liệu này nữa — chỉ cần phần 03 dán trên tường và bảng số ở phần 08. Đó là lúc công việc trở nên nhàm chán đúng như anh muốn.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="sig">Cộng Hưởng Cùng Viên Mãn</p>
+    <p class="think">Nghĩ Thiện!</p>
+    <p class="fine">DAPANO GROUP · Think Kind! · Cash Flow First</p>
+  </div>
+</footer>

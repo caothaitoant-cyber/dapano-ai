@@ -1,0 +1,103 @@
+{
+  "_huong_dan": "Điền một lần ở đây, chạy ap-cau-hinh.py là mọi trang và bài content được điền theo. Ô để trống nghĩa là chưa có — script sẽ báo và không cho phát hành file đó.",
+  "he_thong": {
+    "website": "",
+    "zalo": "",
+    "ten_chuyen_vien": "",
+    "link_huy": "",
+    "webhook_url": ""
+  },
+  "link_tai_lieu": {
+    "link_landing": "",
+    "link_ban_do": "",
+    "link_may_tinh": "",
+    "link_cam_nang": "",
+    "link_12_cau": "",
+    "link_form_tang_2": "",
+    "link_dang_ky_field_tour": ""
+  },
+  "nang_luc_va_lich": {
+    "_ghi_chu": "Phải là SỐ THẬT — đo trong van-hanh/nang-luc-doi-tham-dinh.md và lich-workshop-fieldtour.md. Cấm khan hiếm giả.",
+    "so_ho_so_thang": "",
+    "so_cho_con": "",
+    "lich_workshop": "",
+    "lich_field_tour": "",
+    "ngay_gio": "",
+    "ngay_buoi_sau": "",
+    "thang": "",
+    "thanh_pho": "",
+    "khoang_gia": ""
+  },
+  "so_lieu_thi_truong_A1": {
+    "_ghi_chu": "Lấy từ 00-du-lieu-goc/cap-rate-hn-hcm.md. Chỉ điền dòng có độ tin cậy Cao hoặc Trung bình.",
+    "truc_hn_1": "",
+    "cap_hn_1": "",
+    "khach_hn_1": "",
+    "truc_hn_2": "",
+    "cap_hn_2": "",
+    "khach_hn_2": "",
+    "truc_hn_3": "",
+    "cap_hn_3": "",
+    "khach_hn_3": "",
+    "truc_hn_4": "",
+    "cap_hn_4": "",
+    "khach_hn_4": "",
+    "truc_hn_5": "",
+    "cap_hn_5": "",
+    "khach_hn_5": "",
+    "truc_hn_6": "",
+    "cap_hn_6": "",
+    "khach_hn_6": "",
+    "truc_hcm_1": "",
+    "cap_hcm_1": "",
+    "khach_hcm_1": "",
+    "truc_hcm_2": "",
+    "cap_hcm_2": "",
+    "khach_hcm_2": "",
+    "truc_hcm_3": "",
+    "cap_hcm_3": "",
+    "khach_hcm_3": "",
+    "truc_hcm_4": "",
+    "cap_hcm_4": "",
+    "khach_hcm_4": "",
+    "truc_hcm_5": "",
+    "cap_hcm_5": "",
+    "khach_hcm_5": "",
+    "truc_hcm_6": "",
+    "cap_hcm_6": "",
+    "khach_hcm_6": ""
+  },
+  "ho_so_that_bai_3": {
+    "_ghi_chu": "Ba ví dụ trong bài Myth Busting. Lấy từ hồ sơ thật đã ẩn danh — bịa ví dụ là phá chữ Tín.",
+    "gia_thue_1": "",
+    "gia_thue_that_1": "",
+    "ty_le_vay": "",
+    "so_mat_bang_trong": ""
+  },
+  "testimonial_bai_5": {
+    "_ghi_chu": "KHOÁ. Chỉ điền khi có testimonial thật VÀ giấy xin phép khách bằng văn bản.",
+    "ten_viet_tat": "",
+    "nghe_nghiep": "",
+    "so_von": "",
+    "so_nam": "",
+    "noi_de_tien": "",
+    "cau_noi_that_cua_khach": "",
+    "so_thang": "",
+    "ket_qua_cu_the": "",
+    "thang_gan_nhat": "",
+    "thue_ban_dau": "",
+    "thue_hien_tai": "",
+    "lap_day": "",
+    "dong_tien_dau": "",
+    "dong_tien_nay": "",
+    "dscr_dau": "",
+    "dscr_nay": "",
+    "doan_ke_ve_qua_trinh_lua_chon": ""
+  },
+  "_giu_nguyen": {
+    "_ghi_chu": "Những ô này KHÔNG điền ở đây — công cụ gửi mail tự thay theo từng người nhận.",
+    "danh_sach": [
+      "ho_ten"
+    ]
+  }
+}

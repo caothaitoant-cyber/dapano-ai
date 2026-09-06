@@ -4,6 +4,8 @@ Kế hoạch tặng quà (lead magnet + phễu bán chéo nhiều tầng) cho DA
 
 Bản trình bày đầy đủ: [`thang-qua-dong-tien.html`](./thang-qua-dong-tien.html) (chuẩn nhận diện DAPANO, in/chia sẻ được).
 
+**Bắt đầu chạy: [`KHOI-DONG.md`](./KHOI-DONG.md) — runbook 7 ngày.**
+
 Tiến độ triển khai & bốn thứ đang chặn phễu: [`trang-thai-trien-khai.md`](./trang-thai-trien-khai.md).
 Bảng phân rã từng file: [`bang-chi-tiet-hang-muc.md`](./bang-chi-tiet-hang-muc.md).
 
@@ -16,12 +18,13 @@ Bảng phân rã từng file: [`bang-chi-tiet-hang-muc.md`](./bang-chi-tiet-hang
 | **Tầng 2** | [`tang-2/12-cau-sang-loc.md`](./tang-2) · mẫu báo cáo 6 trang tự tính số |
 | **Tầng 3** | [`tang-3/`](./tang-3) — bộ 12 điểm kiểm pháp lý và hợp đồng thuê mẫu *(bản thảo, chờ pháp lý duyệt)* |
 | **Tầng 4** | [`tang-4/ke-hoach-nang-gia-thue-18-thang.md`](./tang-4) |
-| **Phễu** | [`phieu-dan/`](./phieu-dan) — landing page, luồng email, CRM, quy chế thu tiền |
+| **Phễu** | [`phieu-dan/`](./phieu-dan) — landing page, form Tầng 2, trang Tầng 3, ba email HTML, CRM, quy chế thu tiền |
 | **Content** | [`content/`](./content) — 8 bài theo 8 công thức |
 | **Vận hành** | [`van-hanh/`](./van-hanh) — kịch bản sale, năng lực đội, lịch workshop & field tour |
 
 Xuất lại PDF/PNG: `python3 tang-0/xuat-ban-do.py` · `tang-1/xuat-cam-nang.py` · `tang-2/xuat-bao-cao.py`
 Nghiệm thu máy tính dòng tiền: `python3 tang-1/kiem-chung-may-tinh.py`
+Điền link và số vào mọi trang: điền [`cau-hinh.json`](./cau-hinh.json) rồi chạy `python3 ap-cau-hinh.py`
 
 ---
 

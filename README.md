@@ -4,6 +4,7 @@ Kho tài liệu và kế hoạch triển khai của DAPANO GROUP.
 
 | Thư mục | Nội dung |
 |---|---|
+| [`ke-hoach-tang-qua/KHOI-DONG.md`](./ke-hoach-tang-qua/KHOI-DONG.md) | **Runbook khởi động 7 ngày** — mỗi ngày một việc, ai làm, xong thì kiểm thế nào |
 | [`ke-hoach-tang-qua/`](./ke-hoach-tang-qua) | **Thang Quà Dòng Tiền** — kế hoạch tặng quà & phễu bán chéo nhiều tầng cho khách đầu tư toà nhà dòng tiền tại Hà Nội và TP.HCM |
 | [`ke-hoach-tang-qua/trang-thai-trien-khai.md`](./ke-hoach-tang-qua/trang-thai-trien-khai.md) | Bảng kiểm tiến độ Thang Quà Dòng Tiền — 10 chốt chặn đang mắc và đường đi ngắn nhất để thông |
 | [`ke-hoach-tang-qua/bang-chi-tiet-hang-muc.md`](./ke-hoach-tang-qua/bang-chi-tiet-hang-muc.md) | Bảng phân rã 20 hạng mục thành từng file cụ thể — ruột nội dung, đầu vào, tiêu chí nghiệm thu, thứ tự làm |

@@ -103,11 +103,12 @@ Script đọc **chính công thức trong file xlsx**, tự tính lại, rồi �
 | Kịch bản Cơ sở khớp Sheet 2 | ✅ Đạt |
 | Ba kịch bản xếp đúng thứ tự thận trọng < cơ sở < kỳ vọng | ✅ Đạt |
 | Nhập ô rỗng không lỗi chia 0 | ✅ Đạt |
+| Làm tròn khớp cách Excel làm tròn (0,5 đi ra xa số 0) | ✅ Đạt |
 | Ô công thức đã khoá, chỉ ô vàng gõ được | ✅ Đạt |
 | **Sai lệch dưới 5% trên 5 hồ sơ thật (A2)** | ⬜ **Chờ số của kế toán** |
 | Mở được bằng Google Sheet trên điện thoại | ⬜ Chờ thử trên máy thật |
 
-**Kết quả với bộ số mẫu:** Cap Rate trên tổng vốn năm 1 là 5,08% · DSCR 1,36 (đèn vàng) · dòng tiền 14,8 triệu/tháng · luỹ kế 10 năm 3.051 triệu. Kịch bản thận trọng cho dòng tiền âm 5,2 triệu/tháng ở năm đầu — đúng tinh thần: nếu chỉ kịch bản kỳ vọng mới đẹp thì đang mua một hy vọng, không mua một dòng tiền.
+**Kết quả với bộ số mẫu:** Cap Rate trên tổng vốn năm 1 là 5,07% · DSCR 1,36 (đèn vàng) · dòng tiền 14,7 triệu/tháng · luỹ kế 10 năm 3.049 triệu. Kịch bản thận trọng cho dòng tiền âm 5,2 triệu/tháng ở năm đầu — đúng tinh thần: nếu chỉ kịch bản kỳ vọng mới đẹp thì đang mua một hy vọng, không mua một dòng tiền.
 
 ## 8. Việc còn lại trước khi phát hành
 

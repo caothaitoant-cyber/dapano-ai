@@ -35,6 +35,12 @@ def conv_if(e):
         a = [conv_if(x) for x in a] + ['0']*(3-len(a))
         e = e[:m.start()] + f'(({a[1]}) if ({a[0]}) else ({a[2]}))' + e[i+1:]
 
+def rnd(x, n=0):
+    """Làm tròn kiểu Excel: 0,5 luôn đi ra xa số 0 (Python mặc định làm tròn về số chẵn)."""
+    import math
+    p = 10 ** int(n)
+    return math.floor(abs(x) * p + 0.5) / p * (1 if x >= 0 else -1)
+
 def make_xl(inputs):
     def xl(expr, local):
         e = expr.lstrip('=')
@@ -44,7 +50,7 @@ def make_xl(inputs):
         e = re.sub(r'(?<![<>=!])=(?!=)', '==', e)
         e = conv_if(e)
         e = re.sub(r'\bROUND\(', 'RND(', e).replace('MAX(', 'max(').replace('MIN(', 'min(')
-        return eval(e, {'RND': lambda x, n=0: round(x, int(n)), 'max': max, 'min': min})
+        return eval(e, {'RND': rnd, 'max': max, 'min': min})
     return xl
 
 def load_inputs(IN):
@@ -80,10 +86,10 @@ for n, r in enumerate(rows, 1):
 
 tv, vay = inputs['B11'], inputs['B15']; goc = vay/inputs['B19']; luy = 0
 for n in range(1, 11):
-    dt = round(inputs['B22']*max(0, 12-inputs['B23'])*(1+inputs['B28'])**(n-1))
-    cp = round(inputs['B24']*12*(1+inputs['B29'])**(n-1)); th = round(dt*inputs['B25'])
+    dt = rnd(inputs['B22']*max(0, 12-inputs['B23'])*(1+inputs['B28'])**(n-1))
+    cp = rnd(inputs['B24']*12*(1+inputs['B29'])**(n-1)); th = rnd(dt*inputs['B25'])
     noi = dt-cp-th; dd = max(0, vay-goc*(n-1)); tg = min(goc, dd)
-    lai = round((dd+(dd-tg))/2*(inputs['B17'] if n == 1 else inputs['B18']))
+    lai = rnd((dd+(dd-tg))/2*(inputs['B17'] if n == 1 else inputs['B18']))
     tra = tg+lai; j = noi-tra; luy += j; r = rows[n-1]
     for name, a, b in [('NOI', r['E'], noi), ('Trả nợ', r['I'], tra), ('Dòng tiền', r['J'], j), ('Luỹ kế', r['L'], luy)]:
         if abs(a-b) > 0.51: fails.append(f"Sheet2 năm {n} {name}: file {a:,.1f} ≠ mô hình {b:,.1f}")

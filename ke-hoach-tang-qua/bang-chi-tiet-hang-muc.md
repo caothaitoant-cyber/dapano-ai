@@ -2,6 +2,9 @@
 
 Phân rã 20 chốt chặn trong [`trang-thai-trien-khai.md`](./trang-thai-trien-khai.md) thành **từng file cụ thể**: làm ở đâu, ruột gồm những gì, ai đưa đầu vào, thế nào là xong.
 
+> **Cập nhật 06/09/2026 — đã dựng xong.** Toàn bộ file trong cây thư mục dưới đây đã tồn tại thật.
+> Chú giải: ✅ dùng được ngay · 🔶 đã dựng khung, chờ số thật hoặc chờ chữ ký duyệt.
+
 Quy ước đọc: **Chặn bởi** = chưa xong cái đó thì đừng bắt đầu cái này · **Nghiệm thu** = tiêu chí để nói "xong", không phải cảm tính.
 
 ---
@@ -15,35 +18,35 @@ ke-hoach-tang-qua/
 ├── trang-thai-trien-khai.md           ✅ bảng chốt chặn
 ├── bang-chi-tiet-hang-muc.md          ✅ file này
 ├── 00-du-lieu-goc/
-│   ├── cap-rate-hn-hcm.md             ⬜ A1
-│   └── ho-so-kiem-chung.md            ⬜ A2
-│   └── phan-cong-trach-nhiem.md       ⬜ A3
+│   ├── cap-rate-hn-hcm.md             🔶 khung A1
+│   └── ho-so-kiem-chung.md            🔶 khung A2
+│   └── phan-cong-trach-nhiem.md       🔶 khung A3
 ├── tang-0/
-│   └── ban-do-dong-tien.html          ⬜ B1
+│   └── ban-do-dong-tien.html          🔶 chờ A1 B1
 ├── tang-1/
-│   ├── cam-nang-toa-nha-dau-tien.md   ⬜ B2
-│   ├── may-tinh-dong-tien-spec.md     ⬜ B3-a (đặc tả công thức)
-│   ├── may-tinh-dong-tien.xlsx        ⬜ B3-b (file phát cho khách)
-│   └── 12-cau-hoi-chu-nha.md          ⬜ B4
+│   ├── cam-nang-toa-nha-dau-tien.md   ✅ B2
+│   ├── may-tinh-dong-tien-spec.md     ✅ B3-a (đặc tả công thức)
+│   ├── may-tinh-dong-tien.xlsx        ✅ B3-b (file phát cho khách)
+│   └── 12-cau-hoi-chu-nha.md          ✅ B4
 ├── tang-2/
-│   ├── 12-cau-sang-loc.md             ⬜ B5-a
-│   └── mau-bao-cao-ca-nhan.html       ⬜ B5-b
+│   ├── 12-cau-sang-loc.md             ✅ B5-a
+│   └── mau-bao-cao-ca-nhan.html       ✅ B5-b
 ├── tang-3/
-│   ├── 12-diem-kiem-phap-ly.md        ⬜ B6-a
-│   └── hop-dong-thue-mau.md           ⬜ B6-b
+│   ├── 12-diem-kiem-phap-ly.md        🔶 chờ pháp lý B6-a
+│   └── hop-dong-thue-mau.md           🔶 chờ pháp lý B6-b
 ├── tang-4/
-│   └── ke-hoach-nang-gia-thue-18-thang.md  ⬜ B7
+│   └── ke-hoach-nang-gia-thue-18-thang.md  ✅ B7
 ├── phieu-dan/
-│   ├── landing-page.html              ⬜ C1
-│   ├── luong-email-tu-dong.md         ⬜ C2
-│   ├── cau-hinh-crm.md                ⬜ C3
-│   └── quy-che-thu-tien-hoan-tien.md  ⬜ C4
+│   ├── landing-page.html              ✅ C1
+│   ├── luong-email-tu-dong.md         ✅ C2
+│   ├── cau-hinh-crm.md                ✅ C3
+│   └── quy-che-thu-tien-hoan-tien.md  🔶 chờ duyệt C4
 ├── content/
-│   └── 01..08-*.md                    ⬜ C5 (8 file)
+│   └── 01..08-*.md                    ✅ C5 (8 file)
 └── van-hanh/
-    ├── kich-ban-chuyen-tang.md        ⬜ D3
-    ├── lich-workshop-fieldtour.md     ⬜ D4
-    └── nang-luc-doi-tham-dinh.md      ⬜ D1 + D2
+    ├── kich-ban-chuyen-tang.md        ✅ D3
+    ├── lich-workshop-fieldtour.md     ✅ D4
+    └── nang-luc-doi-tham-dinh.md      🔶 D1 + D2
 ```
 
 ---

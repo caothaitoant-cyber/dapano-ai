@@ -1,85 +1,68 @@
 # Trạng thái triển khai Thang Quà Dòng Tiền
 
-Bản kiểm tra tiến độ: đối chiếu kế hoạch trong [`README.md`](./README.md) với những gì **thật sự đã có**.
+Đối chiếu kế hoạch trong [`README.md`](./README.md) với những gì **thật sự đã có trong tay**.
+Phân rã chi tiết từng hạng mục: [`bang-chi-tiet-hang-muc.md`](./bang-chi-tiet-hang-muc.md).
 
-Ngày kiểm: 06/09/2026 · Kết luận một dòng: **chiến lược đã xong, chưa có món quà nào ra hình để tặng được cho khách.**
-
-Phân rã chi tiết từng hạng mục thành file cụ thể: [`bang-chi-tiet-hang-muc.md`](./bang-chi-tiet-hang-muc.md).
+**Cập nhật: 06/09/2026** · Kết luận một dòng: **toàn bộ phần dựng được đã dựng xong; phễu đang chờ đúng bốn thứ mà chỉ người trong công ty mới cấp được.**
 
 ---
 
-## 1. Đang có gì
+## 1. Đã xong — dùng được ngay
 
-| Hạng mục | Trạng thái |
-|---|---|
-| Kế hoạch thang quà 6 tầng, 5 lớp bán chéo, phễu 90 ngày | ✅ Xong (`README.md`) |
-| Bản trình bày chuẩn nhận diện DAPANO để in/gửi nội bộ | ✅ Xong (`thang-qua-dong-tien.html`) |
-| 3 kịch bản chuyển tầng (lời thoại) | ✅ Xong ở dạng bản thảo, **chưa diễn thử với sale** |
-| Lịch content 8 bài / 4 tuần | ✅ Có tiêu đề & công thức, **chưa có bài viết nào** |
-
-## 2. Đang mắc ở đâu — 10 chốt chặn
-
-Xếp theo thứ tự phải làm. Chốt sau phụ thuộc chốt trước, làm ngược là hỏng.
-
-### Nhóm A — Phải có số thật (chặn tất cả phần còn lại)
-
-| # | Chốt chặn | Vì sao đang mắc | Cần ai / cần gì | Xong thì mở khoá được |
-|---|---|---|---|---|
-| **A1** | **Số Cap Rate & giá thuê thật** theo trục phố HN – HCM | Kế hoạch ghi "do đội thẩm định khảo sát" nhưng chưa có bảng số nào trong tay | Đội thẩm định xuất dữ liệu từ danh mục đang vận hành | Tầng 0, Tầng 1, Tầng 2 — cả ba đều ăn chung nguồn số này |
-| **A2** | **5 hồ sơ giao dịch đã hoàn tất** để kiểm chứng công thức | Không có hồ sơ đối chiếu thì Máy tính dòng tiền chỉ là file Excel đoán mò | Kế toán / vận hành cung cấp giá mua, giá thuê, chi phí, dòng tiền thực tế | Máy tính dòng tiền được phép phát hành |
-| **A3** | **Chốt tên chính thức + người chịu trách nhiệm từng tầng** | Chưa ai đứng tên tầng nào → không có ai bị hỏi khi trễ | Anh quyết trong 1 buổi họp 30 phút | Toàn bộ lộ trình 90 ngày có chủ |
-
-### Nhóm B — Tài sản để tặng (chưa có món nào)
-
-| # | Món quà | Trạng thái | Việc còn lại |
+| Mã | Hạng mục | File | Ghi chú |
 |---|---|---|---|
-| **B1** | **Tầng 0 · Bản đồ Dòng Tiền HN – HCM** (A3, ảnh + PDF) | ❌ Chưa có | Cần A1 → viết nội dung → thiết kế theo brand DAPANO → xuất PNG + PDF |
-| **B2** | **Tầng 1 · Cẩm nang "Toà Nhà Đầu Tiên"** (~40 trang) | ❌ Chưa có | Cần A1 + A2 để có ví dụ số thật → viết 7 bước → dàn trang PDF |
-| **B3** | **Tầng 1 · Máy Tính Dòng Tiền 10 Năm** (Excel/Sheet) | ❌ Chưa có — **đây là món quan trọng nhất, cũng là món chưa động tới** | Dựng công thức NOI / Cap Rate / DSCR / dòng tiền ròng / điểm hoà vốn → kiểm chứng bằng A2 → khoá ô công thức → bản Excel + bản Google Sheet |
-| **B4** | **Tầng 1 · Bộ 12 câu hỏi phải hỏi chủ nhà** | ❌ Chưa có | Viết 1 trang, lấy từ kinh nghiệm đội thẩm định |
-| **B5** | **Tầng 2 · 12 câu hỏi sàng lọc + mẫu Báo cáo cá nhân 6–8 trang** | ❌ Chưa có | Viết bộ câu hỏi → dựng template báo cáo → chạy thử trên 2 khách cũ |
-| **B6** | **Tầng 3 · Bộ 12 điểm kiểm pháp lý + Hợp đồng thuê mẫu** | ❌ Chưa có | Soạn → **bắt buộc qua rà soát pháp lý trước khi phát hành** |
-| **B7** | **Tầng 4 · Kế hoạch nâng giá thuê 18 tháng (mẫu)** | ❌ Chưa có | Chuẩn hoá thành template để bàn giao cùng tài sản |
+| **B4** | Bộ 12 câu hỏi phải hỏi chủ nhà | [`tang-1/12-cau-hoi-chu-nha.md`](./tang-1/12-cau-hoi-chu-nha.md) | Đủ 12 câu kèm dấu hiệu cảnh giác. In một trang, phát được luôn |
+| **B3** | Máy Tính Dòng Tiền 10 Năm | [`tang-1/may-tinh-dong-tien.xlsx`](./tang-1/may-tinh-dong-tien.xlsx) | 4 sheet · 14 ô nhập · khoá ô công thức · nghiệm thu tự động đạt |
+| **B2** | Cẩm nang "Toà Nhà Đầu Tiên" | [`tang-1/cam-nang-toa-nha-dau-tien.pdf`](./tang-1/cam-nang-toa-nha-dau-tien.pdf) | 20 trang A4 chuẩn nhận diện, xuất PDF sẵn |
+| **B5** | Bộ Tầng 2 | [`tang-2/`](./tang-2) | 12 câu sàng lọc + mẫu báo cáo 6 trang **tự tính số** từ hồ sơ khách |
+| **C1** | Landing page Tầng 1 | [`phieu-dan/landing-page.html`](./phieu-dan/landing-page.html) | 7 khối, form 3 trường, chạy được sau khi điền 3 link cấu hình |
+| **C2** | Luồng email tự động | [`phieu-dan/luong-email-tu-dong.md`](./phieu-dan/luong-email-tu-dong.md) | 3 email + 1 tin Zalo, nội dung viết sẵn |
+| **C3** | Cấu hình CRM + webhook | [`phieu-dan/cau-hinh-crm.md`](./phieu-dan/cau-hinh-crm.md) | Mã Apps Script dán vào là chạy |
+| **C5** | 8 bài content | [`content/`](./content) | 3 bài đăng được ngay, 5 bài chờ số thật |
+| **D3** | Kịch bản chuyển tầng | [`van-hanh/kich-ban-chuyen-tang.md`](./van-hanh/kich-ban-chuyen-tang.md) | 3 kịch bản + 6 phản đối + checklist tự chấm |
+| **D4** | Khung lịch workshop & field tour | [`van-hanh/lich-workshop-fieldtour.md`](./van-hanh/lich-workshop-fieldtour.md) | Kịch bản buổi đã có, chờ đặt ngày |
+| **B7** | Kế hoạch nâng giá thuê 18 tháng | [`tang-4/`](./tang-4) | Template bàn giao cùng tài sản |
+| — | Bộ font nhúng sẵn | [`assets/fonts-dapano.css`](./assets/fonts-dapano.css) | Tài liệu in đúng nhận diện kể cả khi máy không có mạng |
 
-### Nhóm C — Đường ống dẫn khách (chưa dựng)
+## 2. Đã dựng khung — chờ số hoặc chờ duyệt
 
-| # | Chốt chặn | Trạng thái | Việc còn lại |
+| Mã | Hạng mục | Đang chờ gì | Ai cấp được |
 |---|---|---|---|
-| **C1** | **Landing page + form 3 trường** | ❌ Chưa có | Chưa chốt tên miền/nền tảng · chưa có trang · chưa có ảnh bìa |
-| **C2** | **Luồng gửi file tự động trong 1 phút** | ❌ Chưa có | Email tự động + link tải + thư cảm ơn; phải tự đăng ký thử 3 lần |
-| **C3** | **CRM + webhook nhận lead** | ❌ Chưa chọn công cụ | Chốt dùng CRM nào → dựng trường "nguồn" và "món quà đã tải" → quy định nhập trong 15 phút |
-| **C4** | **Cổng thanh toán Tầng 3** (299.000đ / 1.000.000đ) | ❌ Chưa có | Chưa có cách thu tiền, chưa có quy chế hoàn 100% vào giao dịch bằng văn bản |
-| **C5** | **8 bài content** | ❌ Mới có tiêu đề | Viết đủ 8 bài theo công thức đã gán · bài #4 (Before-After-Bridge) **phải có testimonial thật + giấy xin phép khách** |
-| **C6** | **Ngân sách quảng cáo + người chạy ads** | ❌ Chưa chốt con số | Quyết ngân sách thử tháng đầu cho cả hai thành phố |
+| **B1** | Bản đồ Dòng Tiền Tầng 0 | 16 trục phố + 4 khoảng Cap Rate | Đội thẩm định (A1) |
+| **A1** | Bảng Cap Rate HN–HCM | Số khảo sát thật | Đội thẩm định |
+| **A2** | 5 hồ sơ kiểm chứng | Số thực thu, thực chi của 5 giao dịch đã xong | Kế toán + vận hành |
+| **A3** | Phân công trách nhiệm | Một buổi họp 30 phút | Anh Toàn |
+| **B6** | Bộ pháp lý Tầng 3 | **Chữ ký duyệt của pháp lý** | Luật sư / bộ phận pháp lý |
+| **C4** | Quy chế thu & hoàn tiền | Duyệt của kế toán + pháp lý | Kế toán + pháp lý |
+| **D1–D2** | Năng lực đội & danh mục tour | Đo thời gian thật một hồ sơ · đếm số toà sẵn sàng | Trưởng đội thẩm định |
 
-### Nhóm D — Vận hành & năng lực thật
+## 3. Bốn thứ đang chặn cả phễu
 
-| # | Chốt chặn | Trạng thái |
-|---|---|---|
-| **D1** | Đội thẩm định có kham nổi **30 hồ sơ/tháng** không? | ❓ Chưa xác nhận — nếu không kham nổi phải hạ số xuống, vì kế hoạch cấm khan hiếm giả |
-| **D2** | Danh mục có đủ **≥ 6 toà sẵn sàng** cho field tour không? | ❓ Chưa kiểm — thiếu thì Tầng 3 mời khách đi xem cái gì |
-| **D3** | Sale đã diễn thử 3 kịch bản chuyển tầng chưa? | ❌ Chưa — kịch bản mới nằm trên giấy |
-| **D4** | Lịch cố định: 2 workshop/tháng, 1 field tour/tháng/thành phố | ❌ Chưa đặt ngày cụ thể |
+Không có bốn thứ này thì mọi file ở trên chỉ chạy được một nửa.
 
-## 3. Đường đi ngắn nhất để thông
+| # | Đang thiếu | Chặn cái gì | Mất bao lâu để có |
+|---|---|---|---|
+| **1** | **Số Cap Rate & giá thuê thật** (A1) | Bản đồ Tầng 0 · bài content #1 · phần ví dụ trong cẩm nang | 2–3 ngày khảo sát |
+| **2** | **5 hồ sơ đã giao dịch** (A2) | Chốt nghiệm thu Máy Tính Dòng Tiền · bài content #3 và #5 | 1 buổi trích sổ sách |
+| **3** | **Ba link cấu hình** — webhook CRM, link tải bộ quà, Zalo chuyên viên | Landing page, luồng email, mọi CTA trong 8 bài content | 1 ngày |
+| **4** | **Chữ ký pháp lý** cho bộ Tầng 3 và quy chế hoàn tiền | Toàn bộ Tầng 3: workshop, vé field tour, bài content #6 và #8 | Tuỳ luật sư |
 
-Ba việc dưới đây làm xong là phễu chạy được ở mức tối thiểu (Tầng 0 → 1 → 2), ba tầng còn lại bổ sung sau:
+## 4. Đường đi ngắn nhất để phễu chạy
 
-1. **A1 + A2** — lấy số thật ra khỏi đầu đội thẩm định, đặt lên bảng. Không có bước này thì mọi thứ phía sau chỉ là văn bản đẹp.
-2. **B3 · Máy Tính Dòng Tiền** — trái tim của Tầng 1. Dựng và kiểm chứng ngay sau khi có A2.
-3. **C1 + C2 + C3** — landing page, gửi file tự động, CRM. Có quà mà không có ống dẫn thì quà nằm trong máy.
+**Tuần này** — họp 30 phút chốt A3 · đội thẩm định trích A1 và A2 · dựng 3 link cấu hình.
+→ Xong ba việc này là **Tầng 0, 1, 2 chạy được thật**: có quà để tặng, có trang để nhận, có báo cáo để trả lại khách.
 
-Chưa xong ba việc trên thì **chưa mở quảng cáo** — đúng như cảnh báo ở mục 9 của kế hoạch: sửa quà và tốc độ gọi trước, tăng ngân sách sau.
+**Tuần sau** — đo D1–D2 và sửa hai con số 30 hồ sơ / 8 người theo thực tế · diễn thử D3 với cả đội · gửi bộ Tầng 3 cho pháp lý.
 
-## 4. Việc em làm được ngay khi anh gật
+**Chỉ mở quảng cáo sau khi** tự đăng ký thử ba lần đều nhận được file trong dưới 60 giây, và sale đã diễn thử trọn ba kịch bản.
 
-- Dựng khung **Máy Tính Dòng Tiền 10 Năm** (B3) — chỉ cần anh đưa 3–5 hồ sơ thật để kiểm chứng công thức.
-- Viết **12 câu hỏi hỏi chủ nhà** (B4) và **12 câu sàng lọc + mẫu Báo cáo cá nhân** (B5).
-- Viết **8 bài content** (C5) theo đúng 8 công thức đã gán, trừ bài #4 phải chờ testimonial thật.
-- Dựng **landing page + form** (C1) ở dạng trang tĩnh chuẩn nhận diện DAPANO.
-- Soạn bản thảo **Cẩm nang "Toà Nhà Đầu Tiên"** (B2) khi đã có số của A1.
+## 5. Luật cứng không được phá
 
-Việc **không** thể làm thay: A1, A2, D1, D2 (số và năng lực thật của đội), B6 (rà soát pháp lý), C3, C4 (chọn công cụ và tài khoản thanh toán).
+- Không tăng ngân sách quảng cáo khi tỷ lệ **Tầng 1 → Tầng 2 dưới 10%**. Sửa quà và tốc độ gọi trước.
+- Không đăng bài content nào còn ô `{{...}}` chưa điền.
+- Không phát hành bộ pháp lý Tầng 3 khi chưa có chữ ký duyệt.
+- Không công bố con số năng lực (30 hồ sơ, 8 người) khác với số đo được.
+- Không bịa ví dụ, không bịa testimonial. Bài #5 khoá đăng cho tới khi có giấy xin phép khách.
 
 ---
 

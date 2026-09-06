@@ -4,6 +4,8 @@ Bản kiểm tra tiến độ: đối chiếu kế hoạch trong [`README.md`](.
 
 Ngày kiểm: 06/09/2026 · Kết luận một dòng: **chiến lược đã xong, chưa có món quà nào ra hình để tặng được cho khách.**
 
+Phân rã chi tiết từng hạng mục thành file cụ thể: [`bang-chi-tiet-hang-muc.md`](./bang-chi-tiet-hang-muc.md).
+
 ---
 
 ## 1. Đang có gì

@@ -5,6 +5,7 @@ Kế hoạch tặng quà (lead magnet + phễu bán chéo nhiều tầng) cho DA
 Bản trình bày đầy đủ: [`thang-qua-dong-tien.html`](./thang-qua-dong-tien.html) (chuẩn nhận diện DAPANO, in/chia sẻ được).
 
 Tiến độ triển khai & các chốt chặn đang mắc: [`trang-thai-trien-khai.md`](./trang-thai-trien-khai.md).
+Bảng phân rã từng file phải làm: [`bang-chi-tiet-hang-muc.md`](./bang-chi-tiet-hang-muc.md).
 
 ---
 

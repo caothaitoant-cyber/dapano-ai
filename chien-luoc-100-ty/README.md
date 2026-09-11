@@ -2,7 +2,11 @@
 
 Chiến lược đầu tư bất động sản của **Cao Thái Toàn** — lộ trình 26 tháng từ **01/09/2026 → 31/10/2028**, mục tiêu **100 tỷ đồng tiền mặt**.
 
-Bản trình bày đầy đủ: [`chien-luoc-100-ty.html`](./chien-luoc-100-ty.html) (chuẩn nhận diện DAPANO, in/chia sẻ được).
+Hai bản:
+- **[`mot-trang-giay.html`](./mot-trang-giay.html)** — bản rút gọn một trang sau tranh biện của 3 trợ lý (phản biện thực chiến / CFO / COO): 3 kịch bản mục tiêu, 7 con số, 4 quy tắc nhẩm, 3 ngưỡng dừng mua, 4 phòng ban và luồng 9 chốt. **In A3, dán tường.**
+- [`chien-luoc-100-ty.html`](./chien-luoc-100-ty.html) — bản chiến lược đầy đủ 13 mục.
+
+> ⚠️ **Ba chỗ trong bản đầy đủ đã bị phản biện và cần sửa** — xem mục "Ba chỗ phải sửa ngay" trong bản một trang: (1) trần 35% túi thương vụ làm không deal nào chạy được; (2) lịch nộp két rút tiền đúng quý cần tiền nhất (Q2/2028, thiếu ~16 tỷ); (3) điều khoản Quỹ Lõi trả ít hơn vốn ngắn hạn nên nhiều khả năng không gọi được vốn.
 
 ---
 

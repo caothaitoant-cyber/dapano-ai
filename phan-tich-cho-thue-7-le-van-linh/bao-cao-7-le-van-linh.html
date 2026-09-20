@@ -1,0 +1,373 @@
+<title>Khai thác nhà 7 Lê Văn Linh</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap">
+<style>
+:root{
+  --bg:#f4f5f7; --surface:#ffffff; --surface-2:#eceff3; --line:#d5dae2;
+  --ink:#1a222e; --ink-2:#4a5567; --ink-3:#6f7a8c;
+  --accent:#1f6f5f; --accent-soft:#dcefe9; --accent-ink:#155445;
+  --warn:#c58b1e; --warn-soft:#fbf0d9; --warn-ink:#7a5410;
+  --bad:#b8433a; --bad-soft:#f8e3e0;
+  --s1:#0e8a6e; --s2:#3e5c8a; --s3:#b8780a;
+  --radius:10px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#12161c; --surface:#1b2028; --surface-2:#232a34; --line:#343d4a;
+    --ink:#e8ebf0; --ink-2:#b6bdc9; --ink-3:#8b94a3;
+    --accent:#3fa48f; --accent-soft:#1e3b35; --accent-ink:#8fd6c3;
+    --warn:#e0a83a; --warn-soft:#3a2f16; --warn-ink:#f0cf86;
+    --bad:#e2736a; --bad-soft:#3d2321;
+    --s1:#1f9e82; --s2:#7fa0d6; --s3:#be8214;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12161c; --surface:#1b2028; --surface-2:#232a34; --line:#343d4a;
+  --ink:#e8ebf0; --ink-2:#b6bdc9; --ink-3:#8b94a3;
+  --accent:#3fa48f; --accent-soft:#1e3b35; --accent-ink:#8fd6c3;
+  --warn:#e0a83a; --warn-soft:#3a2f16; --warn-ink:#f0cf86;
+  --bad:#e2736a; --bad-soft:#3d2321;
+  --s1:#1f9e82; --s2:#7fa0d6; --s3:#be8214;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:15px;line-height:1.6;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:1040px;margin:0 auto}
+h1,h2,h3{font-family:"Lora",Georgia,"Times New Roman",serif;text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:clamp(28px,4.2vw,40px);font-weight:700}
+h2{font-size:clamp(21px,2.6vw,26px);font-weight:600;margin-block:0 14px;padding-top:6px}
+h3{font-size:17px;font-weight:600;margin-block:14px 6px}
+p{margin:0 0 10px;max-width:72ch}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:600}
+header{padding-block:40px 28px;border-bottom:1px solid var(--line);margin-bottom:28px}
+header p.lead{font-size:16px;color:var(--ink-2);margin-top:12px;max-width:70ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13px;color:var(--ink-3);margin-top:14px}
+section{margin-bottom:40px}
+.note{background:var(--warn-soft);border-left:3px solid var(--warn);padding:10px 14px;border-radius:6px;font-size:14px;color:var(--ink);margin:12px 0}
+.note b{color:var(--warn-ink)}
+.callout{background:var(--accent-soft);border-left:3px solid var(--accent);padding:12px 16px;border-radius:6px;margin:12px 0}
+.callout b{color:var(--accent-ink)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:18px 0}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+.tile .k{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.tile .v{font-family:"Lora",Georgia,serif;font-size:26px;font-weight:700;margin-top:4px;font-variant-numeric:tabular-nums}
+.tile .v small{font-family:"Be Vietnam Pro",sans-serif;font-size:13px;font-weight:500;color:var(--ink-2)}
+.tile .d{font-size:13px;color:var(--ink-2);margin-top:4px}
+.tile.bad .v{color:var(--bad)} .tile.good .v{color:var(--accent)} .tile.warn .v{color:var(--warn-ink)}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--surface-2);font-weight:600;font-size:12.5px;letter-spacing:.02em;color:var(--ink-2);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.neg{color:var(--bad);font-weight:600} td.pos{color:var(--accent);font-weight:600}
+tr.hl td{background:var(--accent-soft)}
+.src{color:var(--ink-3);font-size:12.5px}
+.pill{display:inline-block;padding:1px 8px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.pill.a{background:var(--accent-soft);color:var(--accent-ink)} .pill.w{background:var(--warn-soft);color:var(--warn-ink)} .pill.b{background:var(--bad-soft);color:var(--bad)}
+.stars{color:var(--warn);letter-spacing:1px;white-space:nowrap}
+ul,ol{margin:6px 0 12px;padding-left:22px} li{margin-bottom:5px;max-width:75ch}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px} @media(max-width:720px){.two{grid-template-columns:1fr}}
+.phase{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:16px 18px;margin-bottom:12px}
+.phase h3{margin-top:0} .phase .when{font-size:12.5px;color:var(--ink-3);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+figure{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+figcaption{font-size:13px;color:var(--ink-2);margin-top:8px}
+svg text{font-family:"Be Vietnam Pro",sans-serif;fill:var(--ink-2);font-size:12px}
+svg .axis{stroke:var(--line)} svg .zero{stroke:var(--ink-3);stroke-width:1.5}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--ink-2);margin-bottom:6px}
+.legend span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.legend .l1::before{background:var(--s1)} .legend .l2::before{background:var(--s2)} .legend .l3::before{background:var(--s3)}
+.heat td{text-align:right;font-variant-numeric:tabular-nums}
+.heat td.h0{background:var(--bad-soft)} .heat td.h1{background:var(--surface-2)} .heat td.h2{background:var(--accent-soft);font-weight:600}
+footer{border-top:1px solid var(--line);padding-top:16px;font-size:12.5px;color:var(--ink-3)}
+footer a{color:var(--accent)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Nghiên cứu thị trường cho thuê · Cửa Đông – Hoàn Kiếm · Tháng 9/2026</div>
+  <h1>Khai thác cho thuê nhà số 7 Lê Văn Linh</h1>
+  <p class="lead">Khảo sát giá thuê quanh trục Phùng Hưng – Lý Nam Đế – Lê Văn Linh, xác định tệp khách phù hợp và lập phương án khai thác căn nhà 6 tầng, 60 m²/sàn đang thuê gốc 90 triệu/tháng.</p>
+  <div class="meta"><span>Đơn vị tiền: triệu đồng/tháng (viết tắt: tr)</span><span>Số liệu thị trường: tin rao và báo chí 2025 – 9/2026</span><span>Người lập: DAPANO AI cho anh Toàn</span></div>
+</header>
+
+<section>
+<h2>1. Kết luận nhanh</h2>
+<div class="tiles">
+  <div class="tile bad"><div class="k">Giá thuê gốc</div><div class="v">90 <small>tr/tháng</small></div><div class="d">Cao hơn nhà 49 m² × 5 tầng cùng phố đang cho thuê nhà hàng: ~70 tr</div></div>
+  <div class="tile warn"><div class="k">Hiện trạng khai thác được ngay</div><div class="v">2/10 <small>phòng khép kín</small></div><div class="d">8 phòng còn lại dùng chung 1 WC ở tầng 1, chỉ cho thuê được 3–4 tr/phòng</div></div>
+  <div class="tile good"><div class="k">Giá thuê hòa vốn (phương án lai)</div><div class="v">92,5 <small>tr/tháng</small></div><div class="d">Doanh thu 111,6 tr sau khi cải tạo 190 tr</div></div>
+  <div class="tile good"><div class="k">Mục tiêu đàm phán</div><div class="v">≤ 80 <small>tr/tháng</small></div><div class="d">Hoặc 3 tháng miễn phí + hợp đồng 5 năm + quyền cho thuê lại</div></div>
+</div>
+<div class="callout"><b>Khuyến nghị:</b> không nhận nhà ở mức 90 tr với hiện trạng này nếu chưa đàm phán lại. Ở giá 90 tr, mọi phương án dài hạn chỉ hòa vốn hoặc lãi mỏng 2–3 tr/tháng sau thuế; lợi nhuận thật chỉ xuất hiện khi (a) giá thuê gốc về 75–80 tr, hoặc (b) chuyển tầng 3–6 sang lưu trú ngắn ngày cho khách quốc tế với vốn cải tạo ~600 tr và có giấy phép lưu trú.</div>
+<div class="note"><b>Giả định về địa chỉ:</b> Quận Hoàn Kiếm không có phố "Lê Văn Ninh". Phố nối Phùng Hưng với Lý Nam Đế, sát đường tàu, là <b>phố Lê Văn Linh</b> (phường Cửa Đông cũ, nay thuộc phường Hoàn Kiếm). Báo cáo phân tích theo địa chỉ 7 Lê Văn Linh. <b>Giả định về tầng 5–6:</b> anh chưa mô tả, em giả định mỗi tầng 2 phòng, chưa khép kín như tầng 2–3 (kịch bản thận trọng). Nếu tầng 5–6 đã khép kín, chi phí cải tạo giảm ~90 tr và lãi tăng tương ứng.</div>
+</section>
+
+<section>
+<h2>2. Vị trí và lợi thế khai thác</h2>
+<div class="two">
+<div>
+<h3>Đặc điểm phố Lê Văn Linh</h3>
+<ul>
+<li>Phố ngắn khoảng 200 m, nối Lý Nam Đế với Phùng Hưng, ô tô đi hai chiều, vỉa hè rộng, đỗ xe dễ hơn hẳn lõi phố cổ.</li>
+<li>Cách phố cà phê đường tàu Phùng Hưng vài chục mét: khách quốc tế tự đi vẫn đông dù Sở Du lịch đã yêu cầu các công ty lữ hành không đưa tour vào (3/2025). Giờ cao điểm 11–12h và 15h–tối.</li>
+<li>Lý Nam Đế là "phố nhà binh": nhiều cơ quan quân đội, nhà khách, cửa hàng máy tính – thiết bị, tạo lượng khách văn phòng và cán bộ công tác ổn định trong tuần.</li>
+<li>Bán kính 1 km: chợ Đồng Xuân, ga Long Biên, Hàng Mã, Hồ Gươm, Bệnh viện Việt Đức, Phụ sản Trung ương, Bệnh viện K Quán Sứ.</li>
+</ul>
+</div>
+<div>
+<h3>Bối cảnh thị trường 2026</h3>
+<ul>
+<li>Hà Nội 7 tháng đầu 2026 đón 21,2 triệu lượt khách, trong đó 5,3 triệu khách quốc tế (+25%). Công suất phòng lưu trú tháng 7/2026 đạt 58,2%.</li>
+<li>Giá phòng trọ Hà Nội tăng 3–7% sau Tết 2026; chủ trọ tăng 200–300 nghìn/phòng do chi phí đầu tư phòng cháy chữa cháy.</li>
+<li>Nhà mặt phố phường Hoàn Kiếm và Cửa Nam đầu 2026 rao 30–500 tr/tháng, phổ biến 40–70 tr với nhà 30–50 m² ở phố nhánh.</li>
+<li>Nhà 30 m² × 6 tầng cùng phố rao bán 25 tỷ, nhà 49 m² × 5 tầng rao 45 tỷ: giá đất rất cao nên chủ nhà ít linh hoạt về giá thuê, nhưng bù lại chấp nhận hợp đồng dài.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<h2>3. Bảng giá thuê tham chiếu quanh khu vực</h2>
+<p>Tin rao và bài báo thu thập từ Batdongsan, Mogi, Muaban, Alonhadat, Homedy, Nhatot, Phongtro123, Airbnb, Booking và báo chí, giai đoạn 2025 – 9/2026. Giá rao thường cao hơn giá chốt 5–10%.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>#</th><th>Loại hình</th><th>Vị trí</th><th>Đặc điểm</th><th class="num">Giá thuê</th><th>Ghi chú cho nhà số 7</th></tr></thead>
+<tbody>
+<tr class="hl"><td>1</td><td>Nhà mặt phố nguyên căn</td><td>Lê Văn Linh</td><td>49 m² × 5 tầng, mặt tiền 4,2 m, đang cho thuê làm nhà hàng đông khách</td><td class="num">~70 tr</td><td><b>Comp sát nhất.</b> Nhà số 7 to hơn (60 m² × 6 tầng) nhưng 90 tr là cao hơn 28%</td></tr>
+<tr><td>2</td><td>Nhà nguyên căn</td><td>Lý Nam Đế (Cửa Đông)</td><td>35 m² × 5 tầng, 1 phòng/tầng, đủ nội thất</td><td class="num">20 tr</td><td>Nhà nhỏ trong ngõ, thuê ở hoặc làm homestay</td></tr>
+<tr><td>3</td><td>Nhà góc</td><td>Hoàn Kiếm</td><td>5 tầng, góc 2 mặt phố</td><td class="num">62 tr</td><td>Khung giá nhà nguyên căn 5–6 tầng phố nhánh</td></tr>
+<tr><td>4</td><td>Nhà nguyên căn</td><td>Hàng Gai / Hàng Trống</td><td>105 m² × 6 tầng</td><td class="num">41 tr</td><td>Diện tích lớn nhưng trong ngõ</td></tr>
+<tr><td>5</td><td>Nhà homestay</td><td>Hoàn Kiếm</td><td>Mặt tiền &gt;5 m, 46 m²/sàn, có thang máy</td><td class="num">&gt;30 tr</td><td>Chủ nhà chấp nhận cho thuê làm homestay</td></tr>
+<tr><td>6</td><td>Căn hộ tầng 1</td><td>32 Lý Nam Đế</td><td>~50 m², 2 phòng ngủ, 1 WC, đủ đồ</td><td class="num">12 tr</td><td>Khung giá 1 sàn 50–60 m² cho thuê ở</td></tr>
+<tr><td>7</td><td>Căn hộ tập thể</td><td>Lý Nam Đế</td><td>55 m², 2 phòng ngủ, tầng 1</td><td class="num">12 – 13,5 tr</td><td>Cùng phân khúc với dòng 6</td></tr>
+<tr><td>8</td><td>Homestay nguyên căn nhỏ</td><td>22 Hàng Mã</td><td>25 m², đủ đồ, có thương lượng</td><td class="num">13,5 tr</td><td>Giá "sỉ" 1 đơn vị lưu trú đã vận hành</td></tr>
+<tr><td>9</td><td>Mặt bằng nhỏ</td><td>Lý Nam Đế</td><td>26 m², mặt tiền 4 m</td><td class="num">8 tr</td><td>Kiot nhỏ, không phải mặt phố chính</td></tr>
+<tr><td>10</td><td>Studio / văn phòng</td><td>59 Cửa Nam</td><td>1 tầng hoặc 2 tầng</td><td class="num">5 tr / 8 tr</td><td>Khung giá cho thuê nguyên tầng làm dịch vụ nhỏ</td></tr>
+<tr><td>11</td><td>Phòng khép kín</td><td>65 Hàm Long</td><td>Bao điện, nước, internet</td><td class="num">5,5 tr</td><td>Phòng khép kín lõi Hoàn Kiếm, có chủ ở cùng</td></tr>
+<tr><td>12</td><td>Phòng khép kín</td><td>Ngõ 983 Hồng Hà; phòng 18 m² gác xép</td><td>Trong ngõ, xa phố cổ hơn</td><td class="num">2,5 – 4 tr</td><td>Sàn giá thấp của quận</td></tr>
+<tr><td>13</td><td>Phòng mặt tiền 20–30 m²</td><td>Hoàn Kiếm</td><td>Khép kín, đủ đồ, nhà mặt phố</td><td class="num">10 – 15 tr</td><td>Trần giá phòng lẻ, thường là studio có bếp</td></tr>
+<tr><td>14</td><td>Căn hộ 1 phòng ngủ</td><td>Dự án lớn Hoàn Kiếm</td><td>Cho người nước ngoài</td><td class="num">10 – 18 tr</td><td>Khách expat trả 450–850 USD/tháng cho 1PN</td></tr>
+<tr><td>15</td><td>Homestay theo đêm</td><td>Phố cổ, Lý Nam Đế (ngõ 93)</td><td>Phòng đôi riêng, một số kèm bữa sáng</td><td class="num">400 – 850 nghìn/đêm</td><td>ADR tham chiếu cho phương án lưu trú ngắn ngày</td></tr>
+<tr><td>16</td><td>Giường dorm hostel</td><td>Hàng Chiếu, gần ga Long Biên</td><td>Phòng tập thể, WC chung</td><td class="num">105 nghìn/giường/đêm</td><td>Phân khúc thấp, không khuyến nghị</td></tr>
+</tbody></table></div>
+</section>
+
+<section>
+<h2>4. Khung giá đề xuất cho từng phần của nhà số 7</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Hạng mục</th><th>Giá thị trường quan sát</th><th class="num">Thận trọng</th><th class="num">Cơ sở</th><th class="num">Tốt</th><th>Điều kiện để đạt mức "Tốt"</th></tr></thead>
+<tbody>
+<tr><td>Tầng 1 mặt bằng 60 m² (cho thuê riêng)</td><td>50–60% giá trị nhà nguyên căn 70 tr cùng phố</td><td class="num">35 tr</td><td class="num">42 tr</td><td class="num">50 tr</td><td>Khách F&amp;B nhắm khách đường tàu, vỉa hè kê bàn được</td></tr>
+<tr><td>Tầng 1 + tầng 2 (120 m²) cho F&amp;B</td><td>Quán đường tàu, nhà hàng thường thuê 2 tầng</td><td class="num">50 tr</td><td class="num">58 tr</td><td class="num">65 tr</td><td>Hợp đồng 3–5 năm, người thuê tự cải tạo</td></tr>
+<tr><td>Nguyên tầng 60 m² làm dịch vụ / văn phòng nhỏ</td><td>Studio Cửa Nam 5–8 tr; căn hộ Lý Nam Đế 12–13,5 tr</td><td class="num">12 tr</td><td class="num">15 tr</td><td class="num">18 tr</td><td>Spa, nail, lớp yoga, studio ảnh, văn phòng 5–8 người</td></tr>
+<tr><td>Phòng khép kín ~25 m², đủ đồ, dài hạn</td><td>5,5 tr (Hàm Long) đến 10–15 tr (mặt tiền)</td><td class="num">6 tr</td><td class="num">7 tr</td><td class="num">9 tr</td><td>Điều hòa, nóng lạnh, giường tủ, bếp nhỏ, khóa vân tay</td></tr>
+<tr><td>Studio cho người nước ngoài dài hạn</td><td>1PN Hoàn Kiếm 10–18 tr</td><td class="num">9 tr</td><td class="num">11 tr</td><td class="num">13 tr</td><td>Có bếp riêng, máy giặt, cửa sổ, hợp đồng tiếng Anh</td></tr>
+<tr><td>Phòng không khép kín, WC chung ở tầng 1</td><td>Phòng trọ ngõ 2,5–4 tr</td><td class="num">3 tr</td><td class="num">3,5 tr</td><td class="num">4 tr</td><td>Rất khó cho thuê ở phân khúc này tại phố cổ, thời gian trống dài</td></tr>
+<tr><td>Phòng lưu trú ngắn ngày (ADR)</td><td>Homestay phố cổ 400–850 nghìn/đêm</td><td class="num">550 nghìn</td><td class="num">700 nghìn</td><td class="num">850 nghìn</td><td>Nhìn ra đường tàu, WC riêng, điểm đánh giá ≥ 4,7</td></tr>
+</tbody></table></div>
+</section>
+
+<section>
+<h2>5. Tệp khách hàng phù hợp</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Tệp khách</th><th>Vì sao phù hợp với vị trí này</th><th>Phần nhà phù hợp</th><th class="num">Ngân sách</th><th>Mức ưu tiên</th></tr></thead>
+<tbody>
+<tr><td><b>Chủ quán cà phê, nhà hàng nhỏ, bar</b></td><td>Đón dòng khách quốc tế tràn từ phố đường tàu; vỉa hè rộng, ô tô đỗ được; ít cạnh tranh hơn Phùng Hưng</td><td>Tầng 1 (+ tầng 2)</td><td class="num">40 – 65 tr</td><td><span class="stars">★★★★★</span></td></tr>
+<tr><td><b>Người đi làm trẻ, cặp đôi làm việc ở Hoàn Kiếm – Ba Đình</b></td><td>Muốn ở trung tâm, đi bộ đi làm, ngân sách 6–9 tr, cần phòng khép kín sạch, an ninh</td><td>Phòng khép kín tầng 3–6</td><td class="num">6 – 9 tr/phòng</td><td><span class="stars">★★★★★</span></td></tr>
+<tr><td><b>Khách du lịch quốc tế lưu trú ngắn ngày</b></td><td>Đường tàu, phố cổ, ga Long Biên trong tầm đi bộ; khách quốc tế đến Hà Nội tăng 25%</td><td>Tầng 3–6 nếu chuyển đổi</td><td class="num">550 – 850 nghìn/đêm</td><td><span class="stars">★★★★☆</span> cần giấy phép và vốn</td></tr>
+<tr><td><b>Spa, nail, tóc, studio ảnh, lớp yoga, văn phòng nhỏ</b></td><td>Cần 50–60 m² nguyên sàn, giá thấp hơn mặt phố; khách văn phòng Lý Nam Đế và cư dân phố cổ</td><td>Tầng 2 hoặc 3 nguyên tầng</td><td class="num">12 – 18 tr/tầng</td><td><span class="stars">★★★★☆</span></td></tr>
+<tr><td><b>Người nước ngoài làm việc dài hạn</b> (giáo viên, freelancer)</td><td>Thích không khí phố cổ, trả cao hơn khách Việt nếu có bếp riêng và hợp đồng rõ ràng</td><td>Studio tầng 4 (đã khép kín)</td><td class="num">9 – 13 tr/phòng</td><td><span class="stars">★★★☆☆</span></td></tr>
+<tr><td><b>Cán bộ, sĩ quan công tác ngắn hạn tại các cơ quan Lý Nam Đế</b></td><td>Nhu cầu thuê tháng, quý; ít yêu cầu về tiện nghi, thanh toán đúng hạn</td><td>Phòng khép kín</td><td class="num">5 – 7 tr/phòng</td><td><span class="stars">★★★☆☆</span></td></tr>
+<tr><td><b>Người nhà bệnh nhân</b> (Việt Đức, Phụ sản, K)</td><td>Cách 1–1,5 km, thuê ngắn ngày, nhưng ngân sách thấp và biến động</td><td>Phòng không khép kín</td><td class="num">150 – 250 nghìn/đêm</td><td><span class="stars">★★☆☆☆</span> chỉ để lấp trống</td></tr>
+<tr><td>Sinh viên, gia đình có trẻ nhỏ</td><td>Không có trường đại học gần; nhà không có chỗ để xe, cầu thang bộ 6 tầng</td><td>—</td><td class="num">—</td><td><span class="pill b">Không nhắm</span></td></tr>
+</tbody></table></div>
+</section>
+
+<section>
+<h2>6. Hiện trạng nhà và vấn đề cần xử lý</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Tầng</th><th>Hiện trạng (theo mô tả)</th><th>Khai thác được ngay?</th><th>Việc phải làm</th><th class="num">Vốn ước tính</th></tr></thead>
+<tbody>
+<tr><td>Tầng 1</td><td>Mặt bằng kinh doanh 60 m², có 1 WC dùng chung cho tầng 2–3</td><td><span class="pill a">Có</span></td><td>Tách WC chung khỏi mặt bằng (nếu cho thuê F&amp;B, khách thuê không chấp nhận người lạ đi qua). Sơn lại, kiểm tra điện 3 pha</td><td class="num">20 – 30 tr</td></tr>
+<tr><td>Tầng 2</td><td>2 phòng không khép kín</td><td><span class="pill b">Rất khó</span></td><td>Xây thêm 1–2 WC trong sàn hoặc cho thuê nguyên tầng cho F&amp;B/dịch vụ (người thuê tự làm WC)</td><td class="num">45 tr/WC</td></tr>
+<tr><td>Tầng 3</td><td>2 phòng không khép kín</td><td><span class="pill b">Rất khó</span></td><td>Như tầng 2; hoặc cho thuê nguyên tầng làm spa, văn phòng nhỏ</td><td class="num">45 tr/WC</td></tr>
+<tr><td>Tầng 4</td><td>2 phòng khép kín</td><td><span class="pill a">Có</span></td><td>Bổ sung nội thất cơ bản để cho thuê ngay tháng đầu</td><td class="num">12 tr/phòng</td></tr>
+<tr><td>Tầng 5 – 6</td><td>Chưa có mô tả; giả định 2 phòng/tầng, chưa khép kín</td><td><span class="pill w">Cần kiểm tra</span></td><td>Khảo sát ngay: đường ống, kết cấu, sân thượng, lối thoát hiểm</td><td class="num">45 tr/WC</td></tr>
+<tr><td>Cả nhà</td><td>Cầu thang bộ, không mô tả chỗ để xe</td><td>—</td><td>Bình chữa cháy mỗi tầng, đèn thoát hiểm, thang dây, khóa vân tay, camera, internet</td><td class="num">30 – 40 tr</td></tr>
+</tbody></table></div>
+<p>Hai điểm nghẽn quyết định toàn bộ bài toán: <b>8/10 phòng dùng chung một WC ở tầng 1</b> và <b>giá thuê gốc cao hơn giá thị trường</b>. Không xử lý điểm nghẽn thứ nhất thì doanh thu tối đa chỉ ~80 tr, thấp hơn tiền thuê gốc.</p>
+</section>
+
+<section>
+<h2>7. Bốn phương án khai thác và kết quả tài chính</h2>
+<p>Giả định chung: thuê gốc 90 tr; trống phòng dài hạn 8%; phí kênh đặt phòng 15% với lưu trú ngắn ngày; thuế 10% trên doanh thu (5% GTGT + 5% thu nhập cá nhân) nếu kê khai đầy đủ, tách riêng để anh thấy cả lãi trước và sau thuế.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Phương án</th><th>Cách bố trí</th><th class="num">Doanh thu</th><th class="num">Vận hành</th><th class="num">Thuế</th><th class="num">Lãi trước thuế</th><th class="num">Lãi sau thuế</th><th class="num">Thuê gốc hòa vốn</th><th class="num">Vốn cải tạo</th><th class="num">Hoàn vốn</th></tr></thead>
+<tbody>
+<tr><td><b>A. Giữ hiện trạng</b></td><td>T1 cho thuê 40; T4 2 phòng × 7; 8 phòng không khép kín × 3,5</td><td class="num">78,6</td><td class="num">8</td><td class="num">7,9</td><td class="num neg">−19,4</td><td class="num neg">−27,2</td><td class="num">62,8</td><td class="num">30</td><td class="num">—</td></tr>
+<tr><td><b>B. Cải tạo khép kín toàn bộ, cho thuê dài hạn</b></td><td>T1 42; 10 phòng khép kín × 7</td><td class="num">106,4</td><td class="num">10</td><td class="num">10,6</td><td class="num pos">+6,4</td><td class="num neg">−4,2</td><td class="num">85,8</td><td class="num">340</td><td class="num">—</td></tr>
+<tr class="hl"><td><b>C. Phương án lai</b> (đề xuất giai đoạn 1)</td><td>T1+T2 cho F&amp;B 58; T3 nguyên tầng dịch vụ 15; T4–T6 6 phòng khép kín × 7</td><td class="num">111,6</td><td class="num">8</td><td class="num">11,2</td><td class="num pos">+13,6</td><td class="num pos">+2,5</td><td class="num">92,5</td><td class="num">190</td><td class="num">14 tháng (trước thuế)</td></tr>
+<tr><td><b>D1. Lưu trú ngắn ngày</b> ADR 650 nghìn, lấp đầy 60%</td><td>T1+T2 F&amp;B 58; T3–T6 8 phòng homestay</td><td class="num">137,6</td><td class="num">35</td><td class="num">13,8</td><td class="num pos">+12,6</td><td class="num neg">−1,2</td><td class="num">88,8</td><td class="num">610</td><td class="num">—</td></tr>
+<tr><td><b>D2. Lưu trú ngắn ngày</b> ADR 700 nghìn, lấp đầy 65%</td><td>Như D1</td><td class="num">150,8</td><td class="num">35</td><td class="num">15,1</td><td class="num pos">+25,8</td><td class="num pos">+10,7</td><td class="num">100,7</td><td class="num">610</td><td class="num">24 tháng (trước thuế)</td></tr>
+<tr><td><b>D3. Lưu trú ngắn ngày</b> ADR 800 nghìn, lấp đầy 70%</td><td>Như D1, vận hành tốt</td><td class="num">172,2</td><td class="num">36</td><td class="num">17,2</td><td class="num pos">+46,2</td><td class="num pos">+29,0</td><td class="num">119,0</td><td class="num">610</td><td class="num">13 tháng (trước thuế)</td></tr>
+</tbody></table></div>
+
+<figure>
+<div class="legend"><span class="l1">Lãi sau thuế</span><span class="l3">Lãi trước thuế</span></div>
+<div style="overflow-x:auto"><svg viewBox="0 0 720 250" width="100%" style="min-width:560px;max-width:100%" role="img" aria-label="Lãi hàng tháng theo phương án, thuê gốc 90 triệu">
+  <!-- scale: x = 300 + v*6 ; range -30..50 -->
+  <line class="axis" x1="120" y1="18" x2="120" y2="228"/>
+  <line class="axis" x1="420" y1="18" x2="420" y2="228"/>
+  <line class="axis" x1="540" y1="18" x2="540" y2="228"/>
+  <line class="axis" x1="600" y1="18" x2="600" y2="228"/>
+  <line class="zero" x1="300" y1="14" x2="300" y2="232"/>
+  <text x="120" y="244" text-anchor="middle">−30</text><text x="300" y="244" text-anchor="middle">0</text><text x="420" y="244" text-anchor="middle">+20</text><text x="540" y="244" text-anchor="middle">+40</text><text x="600" y="244" text-anchor="start">tr/tháng</text>
+  <!-- A -->
+  <text x="8" y="40">A. Hiện trạng</text>
+  <rect x="183.6" y="26" width="116.4" height="9" rx="2" fill="var(--s3)" opacity=".55"/><rect x="136.8" y="37" width="163.2" height="9" rx="2" fill="var(--s1)"/><text x="130" y="45" text-anchor="end" font-weight="600">−27,2</text>
+  <!-- B -->
+  <text x="8" y="76">B. Khép kín toàn bộ</text>
+  <rect x="300" y="62" width="38.4" height="9" rx="2" fill="var(--s3)" opacity=".55"/><rect x="274.8" y="73" width="25.2" height="9" rx="2" fill="var(--s1)"/><text x="268" y="81" text-anchor="end" font-weight="600">−4,2</text>
+  <!-- C -->
+  <text x="8" y="112">C. Lai (đề xuất)</text>
+  <rect x="300" y="98" width="81.6" height="9" rx="2" fill="var(--s3)" opacity=".55"/><rect x="300" y="109" width="15" height="9" rx="2" fill="var(--s1)"/><text x="322" y="117" font-weight="600">+2,5</text>
+  <!-- D1 -->
+  <text x="8" y="148">D1. Homestay 650k·60%</text>
+  <rect x="300" y="134" width="75.6" height="9" rx="2" fill="var(--s3)" opacity=".55"/><rect x="292.8" y="145" width="7.2" height="9" rx="2" fill="var(--s1)"/><text x="286" y="153" text-anchor="end" font-weight="600">−1,2</text>
+  <!-- D2 -->
+  <text x="8" y="184">D2. Homestay 700k·65%</text>
+  <rect x="300" y="170" width="154.8" height="9" rx="2" fill="var(--s3)" opacity=".55"/><rect x="300" y="181" width="64.2" height="9" rx="2" fill="var(--s1)"/><text x="371" y="189" font-weight="600">+10,7</text>
+  <!-- D3 -->
+  <text x="8" y="220">D3. Homestay 800k·70%</text>
+  <rect x="300" y="206" width="277.2" height="9" rx="2" fill="var(--s3)" opacity=".55"/><rect x="300" y="217" width="174" height="9" rx="2" fill="var(--s1)"/><text x="481" y="225" font-weight="600">+29,0</text>
+</svg></div>
+<figcaption>Lãi hàng tháng của từng phương án ở giá thuê gốc 90 tr. Chỉ C, D2, D3 dương sau thuế; A lỗ nặng vì 8 phòng không khép kín gần như không có giá trị cho thuê ở phố cổ.</figcaption>
+</figure>
+
+<h3>Độ nhạy theo giá thuê gốc (lãi sau thuế, tr/tháng)</h3>
+<div class="two">
+<div class="tablewrap"><table>
+<thead><tr><th>Thuê gốc</th><th class="num">B. Khép kín</th><th class="num">C. Lai</th><th class="num">D2. Homestay</th></tr></thead>
+<tbody>
+<tr><td>75 tr</td><td class="num pos">+10,8</td><td class="num pos">+17,5</td><td class="num pos">+25,7</td></tr>
+<tr><td>80 tr</td><td class="num pos">+5,8</td><td class="num pos">+12,5</td><td class="num pos">+20,7</td></tr>
+<tr><td>85 tr</td><td class="num pos">+0,8</td><td class="num pos">+7,5</td><td class="num pos">+15,7</td></tr>
+<tr><td>90 tr</td><td class="num neg">−4,2</td><td class="num pos">+2,5</td><td class="num pos">+10,7</td></tr>
+</tbody></table></div>
+<div>
+<p>Mỗi 5 tr giảm được ở giá thuê gốc chuyển thẳng thành 5 tr lãi ròng, tương đương 60 tr/năm. Đàm phán từ 90 xuống 80 tr có giá trị bằng toàn bộ vốn cải tạo phương án C trong chưa đầy 2 năm.</p>
+<p>Ngược lại, nếu chủ nhà giữ 90 tr, phương án C chỉ là "giữ chỗ" chờ nâng cấp: lãi 2,5 tr/tháng không đủ bù rủi ro trống mặt bằng tầng 1.</p>
+</div>
+</div>
+
+<h3>Độ nhạy phương án lưu trú ngắn ngày (lãi sau thuế, thuê gốc 90 tr)</h3>
+<div class="tablewrap"><table class="heat">
+<thead><tr><th>Giá phòng bình quân / đêm</th><th class="num">Lấp đầy 50%</th><th class="num">60%</th><th class="num">70%</th><th class="num">80%</th></tr></thead>
+<tbody>
+<tr><td>550 nghìn</td><td class="h0">−22,3</td><td class="h0">−12,2</td><td class="h0">−2,1</td><td class="h1">+8,0</td></tr>
+<tr><td>650 nghìn</td><td class="h0">−13,1</td><td class="h0">−1,2</td><td class="h1">+10,7</td><td class="h2">+22,7</td></tr>
+<tr><td>750 nghìn</td><td class="h0">−4,0</td><td class="h1">+9,8</td><td class="h2">+23,6</td><td class="h2">+37,4</td></tr>
+<tr><td>850 nghìn</td><td class="h1">+5,2</td><td class="h2">+20,8</td><td class="h2">+36,4</td><td class="h2">+52,0</td></tr>
+</tbody></table></div>
+<p>Công suất phòng bình quân toàn Hà Nội tháng 7/2026 là 58%. Homestay tốt ở phố cổ đạt 70–80% nhờ khách quốc tế, nhưng cần 3–6 tháng gây dựng đánh giá. Ô màu xanh là vùng an toàn: giá phòng ≥ 700 nghìn và lấp đầy ≥ 65%.</p>
+</section>
+
+<section>
+<h2>8. Phương án đề xuất theo giai đoạn</h2>
+
+<div class="phase">
+<div class="when">Giai đoạn 0 · Trước khi ký / gia hạn</div>
+<h3>Đàm phán lại hợp đồng thuê gốc</h3>
+<ul>
+<li><b>Giá:</b> đề xuất 75–80 tr, dẫn chứng nhà 49 m² × 5 tầng cùng phố đang cho thuê 70 tr và hiện trạng 8 phòng chưa khép kín. Nếu chủ giữ 90 tr, đổi lấy <b>3 tháng miễn phí</b> (thời gian cải tạo) và giữ giá cố định 2 năm, tăng tối đa 5%/lần.</li>
+<li><b>Thời hạn:</b> tối thiểu 5 năm, quyền ưu tiên gia hạn; đền bù phần cải tạo chưa khấu hao nếu chủ lấy lại nhà sớm.</li>
+<li><b>Quyền cho thuê lại, cải tạo:</b> ghi rõ trong hợp đồng được cho thuê lại từng phần, được xây thêm WC, lắp bảng hiệu, đăng ký hộ kinh doanh và lưu trú tại địa chỉ. Đính kèm bản vẽ cải tạo.</li>
+<li><b>Chủ nhà góp vốn cải tạo:</b> đề nghị chủ chịu phần WC (hạng mục làm tăng giá trị nhà lâu dài) đổi lại anh giữ giá 90 tr.</li>
+</ul>
+</div>
+
+<div class="phase">
+<div class="when">Giai đoạn 1 · Tháng 1–3 · Phương án C</div>
+<h3>Tạo dòng tiền nhanh, cải tạo tối thiểu (vốn ~190 tr)</h3>
+<ul>
+<li><b>Tầng 1 + tầng 2:</b> cho thuê nguyên khối cho quán cà phê, nhà hàng nhỏ hoặc bar nhắm khách đường tàu, mục tiêu 55–60 tr, hợp đồng 3–5 năm, người thuê tự hoàn thiện. Đăng tin trên Batdongsan, nhóm Facebook mặt bằng phố cổ, và chào trực tiếp các chủ quán đang thuê chật trên Phùng Hưng.</li>
+<li><b>Tầng 3:</b> cho thuê nguyên tầng 12–18 tr cho spa, nail, studio ảnh, lớp yoga hoặc văn phòng nhỏ. Nếu sau 45 ngày chưa có khách, chuyển sang làm 2 phòng khép kín.</li>
+<li><b>Tầng 4:</b> bổ sung nội thất, cho thuê ngay 2 phòng khép kín 7–9 tr; ưu tiên khách nước ngoài dài hạn nếu có bếp.</li>
+<li><b>Tầng 5–6:</b> xây 2 WC (mỗi tầng 1 WC chung cho 2 phòng hoặc 1 WC/phòng nếu diện tích cho phép), nội thất 4 phòng, cho thuê dài hạn 6,5–7,5 tr.</li>
+<li><b>Kết quả kỳ vọng:</b> doanh thu 110–115 tr, hòa vốn ở giá thuê gốc 92 tr; lãi 12–17 tr/tháng nếu đàm phán được 75–80 tr.</li>
+</ul>
+</div>
+
+<div class="phase">
+<div class="when">Giai đoạn 2 · Tháng 6–12 · Nâng cấp lên phương án D nếu đủ 3 điều kiện</div>
+<h3>Chuyển tầng 3–6 sang lưu trú ngắn ngày cho khách quốc tế (vốn cộng thêm ~400 tr)</h3>
+<ul>
+<li><b>Điều kiện:</b> (1) giá thuê gốc ≤ 80 tr hoặc hợp đồng ≥ 5 năm; (2) có 600 tr vốn cải tạo hoặc đối tác vận hành homestay góp vốn; (3) hoàn tất giấy phép: hộ kinh doanh dịch vụ lưu trú, an ninh trật tự, phòng cháy chữa cháy, đăng ký khách qua cổng lưu trú.</li>
+<li><b>Sản phẩm:</b> 8 phòng đôi 20–25 m², WC riêng, 2 phòng tầng cao làm "train view", giá 650–850 nghìn/đêm; bán trên Airbnb, Booking, Agoda.</li>
+<li><b>Vận hành:</b> 1 lễ tân kiêm buồng phòng + 1 bán thời gian, hoặc thuê đơn vị quản lý homestay ăn chia 15–20% doanh thu. Chốt tiêu chuẩn: phản hồi trong 10 phút, điểm đánh giá ≥ 4,7.</li>
+<li><b>Kết quả kỳ vọng:</b> doanh thu 150–170 tr; lãi 10–30 tr/tháng sau thuế ở giá gốc 90 tr, 20–40 tr ở giá gốc 80 tr; hoàn vốn 13–24 tháng.</li>
+</ul>
+</div>
+
+<div class="phase">
+<div class="when">Phương án dự phòng</div>
+<h3>Nếu không đàm phán được và không muốn bỏ vốn lớn</h3>
+<p>Cho thuê lại nguyên căn cho một đơn vị vận hành F&amp;B hoặc hostel với giá 90–95 tr chỉ đủ hòa vốn, không tạo giá trị. Trường hợp này nên từ chối căn nhà và tìm căn tương đương ở Hàng Gà, Bát Đàn, Hàng Điếu, Đường Thành với giá gốc 55–70 tr, nơi cùng mô hình C cho biên 20–30 tr/tháng.</p>
+</div>
+</section>
+
+<section>
+<h2>9. Ngân sách cải tạo và vận hành</h2>
+<div class="two">
+<div class="tablewrap"><table>
+<thead><tr><th>Hạng mục cải tạo</th><th class="num">Phương án C</th><th class="num">Phương án D</th></tr></thead>
+<tbody>
+<tr><td>Xây WC mới (45 tr/WC)</td><td class="num">90 (2 WC)</td><td class="num">270 (6 WC)</td></tr>
+<tr><td>Nội thất phòng (12 tr dài hạn, 25 tr homestay)</td><td class="num">72 (6 phòng)</td><td class="num">200 (8 phòng)</td></tr>
+<tr><td>Tách WC tầng 1, sơn sửa, điện nước</td><td class="num">28</td><td class="num">40</td></tr>
+<tr><td>PCCC, thoát hiểm, camera, khóa vân tay, wifi</td><td class="num">—</td><td class="num">70</td></tr>
+<tr><td>Thiết kế, giấy phép, dự phòng 10%</td><td class="num">—</td><td class="num">30</td></tr>
+<tr><td><b>Tổng</b></td><td class="num"><b>190</b></td><td class="num"><b>610</b></td></tr>
+</tbody></table></div>
+<div class="tablewrap"><table>
+<thead><tr><th>Chi phí vận hành hàng tháng</th><th class="num">Phương án C</th><th class="num">Phương án D</th></tr></thead>
+<tbody>
+<tr><td>Điện nước khu chung, internet</td><td class="num">3</td><td class="num">10</td></tr>
+<tr><td>Nhân sự (dọn dẹp / lễ tân, buồng phòng)</td><td class="num">3</td><td class="num">14</td></tr>
+<tr><td>Giặt là, vật tư tiêu hao</td><td class="num">—</td><td class="num">6</td></tr>
+<tr><td>Bảo trì, sửa chữa nhỏ</td><td class="num">2</td><td class="num">3</td></tr>
+<tr><td>Marketing, phần mềm quản lý</td><td class="num">—</td><td class="num">2</td></tr>
+<tr><td><b>Tổng</b></td><td class="num"><b>8</b></td><td class="num"><b>35</b></td></tr>
+</tbody></table></div>
+</div>
+</section>
+
+<section>
+<h2>10. Rủi ro chính và cách xử lý</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Rủi ro</th><th>Mức độ</th><th>Cách giảm thiểu</th></tr></thead>
+<tbody>
+<tr><td>Trống mặt bằng tầng 1–2 kéo dài (chiếm 50% doanh thu)</td><td><span class="pill b">Cao</span></td><td>Chào giá 55 tr thay vì 65 để chốt nhanh; chấp nhận 1 tháng miễn phí sửa quán; ưu tiên khách có sẵn quán gần đó</td></tr>
+<tr><td>Thành phố siết hoạt động phố cà phê đường tàu</td><td><span class="pill w">Trung bình</span></td><td>Không xây mô hình phụ thuộc "train view"; khách Lý Nam Đế và phố cổ vẫn đủ nuôi F&amp;B và phòng dài hạn</td></tr>
+<tr><td>Chủ nhà lấy lại nhà sớm sau khi anh đã cải tạo</td><td><span class="pill b">Cao</span></td><td>Điều khoản đền bù giá trị cải tạo chưa khấu hao + phạt 6 tháng tiền thuê; công chứng hợp đồng</td></tr>
+<tr><td>Chi phí WC vượt dự toán do đường ống nhà cũ</td><td><span class="pill w">Trung bình</span></td><td>Khảo sát thợ trước khi ký; dự phòng 10–15%; gom WC theo trục đứng để dùng chung ống</td></tr>
+<tr><td>PCCC với nhà ở kết hợp kinh doanh và lưu trú</td><td><span class="pill w">Trung bình</span></td><td>Làm đủ bình chữa cháy, đèn thoát hiểm, thang dây, lối thoát tầng thượng trước khi cho thuê; không chia nhỏ quá 2 phòng/tầng</td></tr>
+<tr><td>Thuế 10% doanh thu nếu kê khai</td><td><span class="pill w">Trung bình</span></td><td>Đã tính vào mô hình; đăng ký hộ kinh doanh ngay từ đầu để chi phí hợp lệ và tránh truy thu</td></tr>
+</tbody></table></div>
+</section>
+
+<section>
+<h2>11. Việc cần làm trong 14 ngày tới</h2>
+<ol>
+<li>Xác nhận hiện trạng tầng 5–6, chỗ để xe, tình trạng điện nước; chụp ảnh và đo đạc từng sàn.</li>
+<li>Gọi 3–5 tin rao trong bảng tham chiếu để kiểm chứng giá chốt thực tế (đặc biệt nhà 49 m² Lê Văn Linh và các phòng khép kín Hàm Long, Lý Nam Đế).</li>
+<li>Xin báo giá 2 nhà thầu cho hạng mục WC và nội thất theo bảng ngân sách.</li>
+<li>Gửi đề nghị đàm phán cho chủ nhà: giá 80 tr hoặc 90 tr kèm 3 tháng miễn phí, hạn 5 năm, quyền cho thuê lại và cải tạo.</li>
+<li>Đăng tin thăm dò mặt bằng tầng 1–2 với giá 60 tr để đo phản ứng thị trường trước khi quyết định ký.</li>
+</ol>
+</section>
+
+<footer>
+<p><b>Nguồn dữ liệu:</b> tin rao trên Batdongsan.com.vn, Mogi.vn, Muaban.net, Alonhadat.com.vn, Homedy.com, Nhatot.com, Phongtro123.com, Ever.vn, BDS68 (2025 – 9/2026); Airbnb, Booking.com và các bài tổng hợp homestay phố cổ 2026; Sở Văn hóa Thể thao Hà Nội và Vietnamnet về du lịch 7 tháng đầu 2026; Dân trí về phố cà phê đường tàu; VnExpress, Mogi News về giá phòng trọ sau Tết 2026; giadinh.suckhoedoisong.vn về giá nhà mặt phố phường Hoàn Kiếm, Cửa Nam đầu 2026.</p>
+<p><b>Giới hạn:</b> giá lấy từ tin rao và tóm tắt tìm kiếm, chưa gọi xác minh giá chốt; chưa khảo sát thực địa căn nhà; tầng 5–6 dựa trên giả định. Các con số tài chính là ước tính để ra quyết định, cần cập nhật sau khi có báo giá nhà thầu và phản hồi của chủ nhà.</p>
+</footer>
+</div>

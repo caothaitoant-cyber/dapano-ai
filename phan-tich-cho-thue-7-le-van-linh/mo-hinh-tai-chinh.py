@@ -1,4 +1,5 @@
 # Mô hình tài chính nhà 7 Lê Văn Linh - đơn vị: triệu VND/tháng
+# Lấp đầy homestay hiệu chỉnh theo AirROI Hoàn Kiếm 4/2025-3/2026: 46-53%
 LEASE=90
 TAX=0.10   # 5% GTGT + 5% TNCN trên doanh thu (hộ kinh doanh cho thuê), nếu kê khai đầy đủ
 VAC=0.08   # trống phòng dài hạn
@@ -36,9 +37,9 @@ rows.append(longterm(42, 10, 7, opex=10, capex=340, label="B. Cải tạo khép 
 # C: T1+T2 F&B 58, T3 nguyên tầng dịch vụ 15, T4-T6 6 phòng khép kín 7
 rows.append(longterm(58, 6, 7, floors_whole=1, floor_price=15, opex=8, capex=190, label="C. Lai: F&B 2 tầng + tầng dịch vụ + 6 phòng khép kín"))
 # D: T1+T2 F&B 58, T3-T6 8 phòng lưu trú ngắn ngày
-rows.append(shortstay(58, 8, 650, 0.60, opex=35, capex=610, label="D1. Homestay 8 phòng - ADR 650k, lấp đầy 60%"))
-rows.append(shortstay(58, 8, 700, 0.65, opex=35, capex=610, label="D2. Homestay 8 phòng - ADR 700k, lấp đầy 65%"))
-rows.append(shortstay(58, 8, 800, 0.70, opex=36, capex=610, label="D3. Homestay 8 phòng - ADR 800k, lấp đầy 70%"))
+rows.append(shortstay(58, 8, 650, 0.50, opex=35, capex=610, label="D1. Homestay 8 phòng - ADR 650k, lấp đầy 50% (TB Hoàn Kiếm)"))
+rows.append(shortstay(58, 8, 750, 0.55, opex=35, capex=610, label="D2. Homestay 8 phòng - ADR 750k, lấp đầy 55%"))
+rows.append(shortstay(58, 8, 850, 0.70, opex=35, capex=610, label="D3. Homestay 8 phòng - ADR 850k, lấp đầy 70%"))
 
 print(f"{'Phương án':60} {'DT':>6} {'Opex':>5} {'Thuế':>5} {'Lãi trc thuế':>12} {'Lãi sau thuế':>12} {'Thuê hòa vốn':>12} {'Capex':>6} {'Hoàn vốn(th)':>12}")
 for r in rows:
@@ -48,14 +49,14 @@ for r in rows:
 print("\nĐộ nhạy theo giá thuê gốc (lãi sau thuế, triệu/tháng):")
 for lease in (75,80,85,90):
     c=longterm(58,6,7,floors_whole=1,floor_price=15,opex=8,lease=lease)
-    d=shortstay(58,8,700,0.65,opex=35,lease=lease)
+    d=shortstay(58,8,750,0.55,opex=35,lease=lease)
     b=longterm(42,10,7,opex=10,lease=lease)
     print(f"  Thuê {lease}: B={b['net']:5.1f}  C={c['net']:5.1f}  D2={d['net']:5.1f}")
 
 print("\nĐộ nhạy homestay (lãi sau thuế) ADR x lấp đầy, thuê 90:")
-for adr in (550,650,750,850):
+for adr in (550,650,750,850,1000):
     line=[]
-    for occ in (0.5,0.6,0.7,0.8):
+    for occ in (0.45,0.55,0.65,0.75):
         d=shortstay(58,8,adr,occ,opex=35)
         line.append(f"{d['net']:6.1f}")
     print(f"  ADR {adr}k: "+"  ".join(line))

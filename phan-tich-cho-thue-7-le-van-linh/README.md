@@ -47,6 +47,34 @@ Thuê gốc: **90 triệu/tháng**.
 
 Không nhắm: sinh viên, gia đình có trẻ nhỏ.
 
+## Khảo sát theo kênh (bổ sung)
+
+**Kênh dài hạn** (Batdongsan, Alonhadat, Muaban, Mogi, Nhatot, Phongtro123, Homedy, kênh expat, nhóm Facebook):
+
+| Tin tiêu biểu | Giá |
+|---|---|
+| Studio 30 m² đủ đồ nhìn ra Phùng Hưng, ngõ 23B Lý Nam Đế (có thang máy) | 7,5 tr + phí DV 300k |
+| Chung cư mini Hoàn Kiếm 20–35 m² | 3–7 tr, tới 10 tr |
+| Mặt bằng Hàng Gà / Hàng Bè 50 m² / Cầu Gỗ 60 m² | 45 / 50 / 60 tr |
+| Mặt bằng 50–100 m² trong ngõ Hoàn Kiếm | 10–40 tr |
+| Nhà ngõ Hàng Hương 70 m² × 5T, 6 phòng cho thuê làm homestay | 13 tr |
+| Sang nhượng homestay Hàng Buồm 44 m² × 5T, 2 phòng khép kín/tầng | thuê gốc ~16 tr, sang nhượng 150–200 tr (các tin tương tự) |
+| Studio Old Quarter cho người nước ngoài | 500–850 USD; phổ thông 250–500 USD |
+
+**Kênh ngắn ngày** (Booking, Agoda, Airbnb, Traveloka, Mytour, Tripadvisor):
+
+| Số liệu | Giá trị |
+|---|---|
+| AirROI Hoàn Kiếm 4/2025–3/2026: lấp đầy | 46–53 % |
+| AirROI Hoàn Kiếm: doanh thu/listing/năm | 7.144–7.479 USD (ADR suy ra ~1,0–1,1 tr) |
+| Toàn Hà Nội (AirROI / Airbtics) | ADR 46 USD, 31 % / ADR 35 USD, 42 % |
+| Đối thủ trong 300 m | Anchie Home, La Maison Rose (17 Lý Nam Đế), Moc Vien (12A7 Lý Nam Đế), Lane89, Hanoi Family Homestay 2 (163 Phùng Hưng) |
+| Anchie Homestay giá đêm | 450 nghìn – 1 triệu |
+| Airbnb phố cổ | nhà nguyên căn từ 49 USD, studio 60 USD/đêm |
+| Hoa hồng OTA | 15–20 % |
+
+Pháp lý: NQ 56/2026/NQ-HĐND (từ 1/7/2026) phạt không khai báo lưu trú 3–12 tr; homestay chung cư bị cấm từ 8/2024, nhà đất được nhưng cần hộ kinh doanh, ANTT, PCCC.
+
 ## Bốn phương án (thuê gốc 90 tr, thuế 10% doanh thu, đơn vị tr/tháng)
 
 | Phương án | Doanh thu | Lãi trước thuế | Lãi sau thuế | Thuê gốc hòa vốn | Vốn cải tạo |
@@ -54,16 +82,17 @@ Không nhắm: sinh viên, gia đình có trẻ nhỏ.
 | A. Giữ hiện trạng | 78,6 | −19,4 | −27,2 | 62,8 | 30 |
 | B. Khép kín toàn bộ, thuê dài hạn | 106,4 | +6,4 | −4,2 | 85,8 | 340 |
 | **C. Lai: F&B 2 tầng + tầng dịch vụ + 6 phòng khép kín** | 111,6 | +13,6 | +2,5 | 92,5 | 190 |
-| D2. Homestay 8 phòng, ADR 700k, lấp đầy 65% | 150,8 | +25,8 | +10,7 | 100,7 | 610 |
-| D3. Homestay 8 phòng, ADR 800k, lấp đầy 70% | 172,2 | +46,2 | +29,0 | 119,0 | 610 |
+| D1. Homestay 8 phòng, ADR 650k, lấp đầy 50 % (trung bình Hoàn Kiếm) | 124,3 | −0,7 | −13,1 | 76,9 | 610 |
+| D2. Homestay 8 phòng, ADR 750k, lấp đầy 55 % | 142,2 | +17,2 | +2,9 | 92,9 | 610 |
+| D3. Homestay 8 phòng, ADR 850k, lấp đầy 70 % | 179,4 | +54,4 | +36,4 | 126,4 | 610 |
 
-Độ nhạy theo giá thuê gốc (lãi sau thuế): ở 80 tr, C = +12,5, D2 = +20,7; ở 75 tr, C = +17,5, D2 = +25,7.
+Độ nhạy theo giá thuê gốc (lãi sau thuế): ở 80 tr, C = +12,5, D2 = +12,9; ở 75 tr, C = +17,5, D2 = +17,9.
 
 ## Lộ trình đề xuất
 
 1. **Giai đoạn 0 – đàm phán**: giá 75–80 tr, hoặc giữ 90 tr đổi 3 tháng miễn phí; hợp đồng ≥ 5 năm; quyền cho thuê lại, cải tạo, đăng ký kinh doanh và lưu trú; đền bù cải tạo nếu lấy lại nhà sớm.
 2. **Giai đoạn 1 (tháng 1–3) – phương án C**, vốn ~190 tr: T1+T2 cho F&B 55–60 tr; T3 nguyên tầng 12–18 tr; T4 cho thuê ngay; T5–T6 xây WC, 4 phòng khép kín.
-3. **Giai đoạn 2 (tháng 6–12) – nâng lên phương án D** nếu: giá gốc ≤ 80 tr hoặc hợp đồng ≥ 5 năm; có 600 tr vốn; đủ giấy phép lưu trú, ANTT, PCCC.
+3. **Giai đoạn 2 (tháng 6–12) – nâng lên phương án D** chỉ khi: giá gốc ≤ 80 tr; có 600 tr vốn; đủ giấy phép lưu trú, ANTT, PCCC; và vận hành được trên mức lấp đầy trung bình 46–53 % của Hoàn Kiếm.
 4. **Dự phòng**: không đàm phán được thì từ chối, tìm căn tương đương ở Hàng Gà, Bát Đàn, Hàng Điếu, Đường Thành với giá gốc 55–70 tr.
 
 ## Giới hạn

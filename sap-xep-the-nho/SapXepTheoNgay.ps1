@@ -185,19 +185,19 @@ foreach ($x in $DanhSach) {
     $goc  = [System.IO.Path]::GetFileNameWithoutExtension($x.File.Name)
     $duoi = $x.File.Extension
     $tenMoi = if ($GiuTenGoc) { "$goc$duoi" } else { '{0}_{1}{2}' -f $x.ThoiGian.ToString('yyyyMMdd_HHmmss'), $goc, $duoi }
-    $dich = Join-Path $thuMuc $tenMoi
+    $fileDich = Join-Path $thuMuc $tenMoi
     $n = 1
-    while ($DaDung.ContainsKey($dich.ToLower()) -or (-not $XemTruoc -and (Test-Path -LiteralPath $dich))) {
+    while ($DaDung.ContainsKey($fileDich.ToLower()) -or (-not $XemTruoc -and (Test-Path -LiteralPath $fileDich))) {
         $tenMoi = if ($GiuTenGoc) { "{0}_{1}{2}" -f $goc, $n, $duoi } else { '{0}_{1}_{2}{3}' -f $x.ThoiGian.ToString('yyyyMMdd_HHmmss'), $goc, $n, $duoi }
-        $dich = Join-Path $thuMuc $tenMoi
+        $fileDich = Join-Path $thuMuc $tenMoi
         $n++
     }
-    $DaDung[$dich.ToLower()] = $true
+    $DaDung[$fileDich.ToLower()] = $true
 
     if (-not $XemTruoc) {
         New-Item -ItemType Directory -Path $thuMuc -Force | Out-Null
-        Copy-Item -LiteralPath $x.File.FullName -Destination $dich
-        (Get-Item -LiteralPath $dich).LastWriteTime = $x.File.LastWriteTime
+        Copy-Item -LiteralPath $x.File.FullName -Destination $fileDich
+        (Get-Item -LiteralPath $fileDich).LastWriteTime = $x.File.LastWriteTime
     }
 
     $ChiTiet.Add([pscustomobject][ordered]@{

@@ -38,6 +38,16 @@ Dùng khi video đã tải vào `G:\My Drive\BRIAN SECOND 2\cashflow`. File `.ba
 - Chỉ xử lý các file `DJI_…` nằm **ngay trong** thư mục `cashflow`. Các thư mục con khác (ví dụ `Buổi cafe Talk`) giữ nguyên.
 - File nào chưa tải lên xong sẽ báo "Khong tim thay". Tải xong thì anh chạy lại, file đã xếp sẽ được bỏ qua.
 
+## Chép lời video để phân loại thầy / học viên theo nội dung → nháy đúp `ChepLoiVideo.bat`
+
+Cần 2 file `ChepLoiVideo.bat` và `chep_loi.py` nằm chung một thư mục. File `.bat` làm lần lượt:
+1. Tự cài Python nếu máy chưa có (qua winget), rồi cài thư viện chép lời `faster-whisper`. Lần đầu tải thêm model khoảng 500 MB.
+2. Chép lời tiếng Việt từng video trong `G:\My Drive\BRIAN SECOND 2\cashflow`, kể cả trong các thư mục con.
+3. Gộp thành một file **`Desktop\LoiNoi_KhoaHoc\TatCa_LoiNoi.txt`**. Gửi file này cho Claude để phân loại thầy/học viên và tóm tắt từng vòng.
+
+- Tổng khoảng 5 giờ video, chạy bằng CPU mất khoảng 1–3 tiếng. Nếu bị ngắt, chạy lại sẽ bỏ qua video đã chép.
+- Video trên Drive ở chế độ "chỉ trực tuyến" sẽ được Google Drive tải tạm về máy trong lúc chép. Ổ C: cần còn trống vài chục GB.
+
 ## Bảng vòng
 
 | Ngày | Vòng | Buổi | Giờ quay | Số file | Tổng thời lượng ước tính |

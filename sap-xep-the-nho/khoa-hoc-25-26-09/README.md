@@ -21,6 +21,14 @@ KhoaHoc_25-26_09_2026\
 └── BaoCao_PhanLoai.csv
 ```
 
+## Đã dựng sẵn trên Google Drive (28/09/2026)
+
+Trong [thư mục Drive của anh](https://drive.google.com/drive/folders/1JvDg1Jxd2HCkJDywry0d1aCpMiLQMTQN) đã có:
+- `0_Bang_phan_loai/Bang_phan_loai_video_25-26-09-2026`: Google Sheet 101 dòng. Cột **Xác nhận / Ghi chú** để anh đánh dấu thầy/học viên sau khi xem.
+- `Ngay_1_25-09-2026/` với 3 vòng và `Ngay_2_26-09-2026/` với 4 vòng, mỗi vòng đã có sẵn thư mục con (thầy giáo, học viên, clip ngắn, ảnh).
+
+Các thư mục đang **trống**, vì video còn nằm trên thẻ nhớ. Khi chạy `ChayNhanh.bat`, anh nhập thư mục đích là thư mục này trong ổ Google Drive (`G:\My Drive\<tên thư mục>`). Script sẽ chép video vào đúng các thư mục đã có sẵn.
+
 ## Bảng vòng
 
 | Ngày | Vòng | Buổi | Giờ quay | Số file | Tổng thời lượng ước tính |

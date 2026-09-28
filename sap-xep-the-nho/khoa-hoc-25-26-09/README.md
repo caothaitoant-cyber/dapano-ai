@@ -29,6 +29,15 @@ Trong [thư mục Drive của anh](https://drive.google.com/drive/folders/1JvDg1
 
 Các thư mục đang **trống**, vì video còn nằm trên thẻ nhớ. Khi chạy `ChayNhanh.bat`, anh nhập thư mục đích là thư mục này trong ổ Google Drive (`G:\My Drive\<tên thư mục>`). Script sẽ chép video vào đúng các thư mục đã có sẵn.
 
+## Video đã nằm sẵn trên Google Drive → nháy đúp `SapXepTrenDrive.bat`
+
+Dùng khi video đã tải vào `G:\My Drive\BRIAN SECOND 2\cashflow`. File `.bat` làm lần lượt:
+1. **Xem trước**: in bảng file nào sẽ vào thư mục nào.
+2. Anh gõ `Y` thì mới **di chuyển thật**. Di chuyển trong cùng ổ G: nên gần như tức thì, không tải lại, không tốn thêm dung lượng.
+
+- Chỉ xử lý các file `DJI_…` nằm **ngay trong** thư mục `cashflow`. Các thư mục con khác (ví dụ `Buổi cafe Talk`) giữ nguyên.
+- File nào chưa tải lên xong sẽ báo "Khong tim thay". Tải xong thì anh chạy lại, file đã xếp sẽ được bỏ qua.
+
 ## Bảng vòng
 
 | Ngày | Vòng | Buổi | Giờ quay | Số file | Tổng thời lượng ước tính |

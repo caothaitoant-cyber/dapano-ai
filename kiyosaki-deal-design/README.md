@@ -2,7 +2,9 @@
 
 > **Bản 1 trang để in:** [`mot-trang-deal-dong-tien.html`](./mot-trang-deal-dong-tien.html) · [PDF A4](./mot-trang-deal-dong-tien.pdf)
 >
-> **Kế hoạch triển khai 10/2026–10/2028 (100 tỷ tiền mặt, sau tranh biện 3 agent):** [`ke-hoach-100-ty-2026-2028.md`](./ke-hoach-100-ty-2026-2028.md)
+> **Kế hoạch 1 trang để triển khai (bản đơn giản, chốt sau vòng 3):** [`ke-hoach-1-trang.html`](./ke-hoach-1-trang.html) · [PDF A4](./ke-hoach-1-trang.pdf)
+>
+> **Kế hoạch chi tiết 10/2026–10/2028 (100 tỷ tiền mặt, sau tranh biện 3 agent):** [`ke-hoach-100-ty-2026-2028.md`](./ke-hoach-100-ty-2026-2028.md)
 
 > Tài liệu nghiên cứu nội bộ DAPANO GROUP — tổng hợp từ sách của Robert Kiyosaki
 > (*Rich Dad's Guide to Investing*, *Cashflow Quadrant*) và các kỹ thuật tài chính sáng tạo

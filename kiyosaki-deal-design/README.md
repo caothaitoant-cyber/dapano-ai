@@ -1,5 +1,7 @@
 # Kiyosaki: 7 tầng nhà đầu tư & 32 cách thiết kế deal
 
+> **Bản 1 trang để in:** [`mot-trang-deal-dong-tien.html`](./mot-trang-deal-dong-tien.html) · [PDF A4](./mot-trang-deal-dong-tien.pdf)
+
 > Tài liệu nghiên cứu nội bộ DAPANO GROUP — tổng hợp từ sách của Robert Kiyosaki
 > (*Rich Dad's Guide to Investing*, *Cashflow Quadrant*) và các kỹ thuật tài chính sáng tạo
 > mà Rich Dad thường dạy.
